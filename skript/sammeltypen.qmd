@@ -7,7 +7,7 @@ Sammeltypen werden benutzt, um mehrere Werte in einer Variablen zu speichern und
 
   - [Mengen](https://de.wikipedia.org/wiki/Menge_%28Datenstruktur%29) sind ungeordnete Sammlungen, die jedes Element nur einmal enthalten können.
 
-  - [assoziative Arrays](https://de.wikipedia.org/wiki/Zuordnungstabelle_%28Datenstruktur%29) oder Dictionaries sind Zuordnungstabellen, d. h. sie bestehen aus Schlüssel-Wert-Paaren. 
+  - [Assoziative Arrays](https://de.wikipedia.org/wiki/Zuordnungstabelle_%28Datenstruktur%29) oder Dictionaries sind Zuordnungstabellen, d. h. sie bestehen aus Schlüssel-Wert-Paaren. 
   
 In diesem Kapitel werden die vier Sammeltypen zunächst kurz vorgestellt. Anschließend wird die Arbeitsweise insbesondere mit Listen erläutert.
 
@@ -37,7 +37,7 @@ print(leere_liste)
 ```
 
 ### Slicing: der Zugriffsoperator []
-Der Zugriff auf einzelne oder mehrere Elemente einer Liste (und andere Sammeltypen) erfolgt über den Zugriffsoperator []. Ein Ausschnitt aus einem Objekt wird Slice genannt, der Operator heißt deshalb auch Slice Operator.
+Der Zugriff auf einzelne oder mehrere Elemente einer Liste (und andere Sammeltypen) erfolgt über den Zugriffsoperator `[]`. Ein Ausschnitt aus einem Objekt wird Slice genannt, der Operator heißt deshalb auch Slice Operator.
 
 #### Zugriff auf einzelne Elemente
 Elemente werden über ihren Index, bei 0 beginnend, angesprochen.
@@ -115,7 +115,7 @@ Für den Listentyp sind verschiedene Methoden definiert.
 
 - `list.reverse()` kehrt die Reihenfolge der Listenelemente um (die Liste wird dadurch verändert!). 
 
-- `list.sort(reverse = False)` sortiert die Liste, mit dem optionalen Argument reverse = True absteigend (die Liste wird dadurch verändert!). Die Datentypen innerhalb der Liste müssen sortierbar sein (d. h. alle Elemente sind numerisch oder Zeichen).
+- `list.sort(reverse = False)` sortiert die Liste, mit dem optionalen Argument `reverse = True` absteigend (die Liste wird dadurch verändert!). Die Datentypen innerhalb der Liste müssen sortierbar sein (d. h. alle Elemente sind numerisch oder Zeichen).
 
 ```{python}
 print(liste1)
@@ -218,7 +218,7 @@ print("ID liste2:", id(liste2))
 print("ID liste1 gleich ID list2:", liste1 is liste2)
 ```
 
-::: {.callout-note collapse="true"}
+::: {#wrn-wertgleichheit .callout-warning appearance="simple" collapse="true"}
 ## Identität vs. Wertgleichheit
 
 Der Operator `is` prüft die Identität zweier Objekte und unterscheidet sich dadurch vom logischen Operator `==`, der auf Wertgleichheit prüft. Da liste1 und liste2 die gleichen Elemente enthalten, liegen sowohl Identität und Wertgleichheit vor. Der Unterschied von Identität und Wertgleichheit kann anhand eines Werts verdeutlicht werden (Im Code-Beispiel wird eine Syntax-Warnung unterdrückt.).
@@ -294,14 +294,14 @@ print(tupel1, tupel2)
 ```
 
 ## Mengen
-In Python können Mengen mit der `set()` Funktion z. B. aus einer Liste oder aus einem Tupel erzeugt oder durch geschweiften Klammern `{}` erstellt werden (eine leere Menge kann nur mit `set()` erzeugt werden, da `{}` ein leeres Dictionary anlegt). Mengen sind ungeordnete Sammelung, dementsprechend haben die Elemente keine Reihenfolge.
+In Python können Mengen mit der `set()` Funktion z. B. aus einer Liste oder aus einem Tupel erzeugt oder durch geschweiften Klammern `{}` erstellt werden (eine leere Menge kann nur mit `set()` erzeugt werden, da `{}` ein leeres Dictionary anlegt). Mengen sind ungeordnete Sammelungen, dementsprechend haben die Elemente keine Reihenfolge.
 
 ```{python}
 liste = [1, 1, 5, 3, 3, 4, 2, 'a', 123, 1000, ('tupel', 5)]
 print("Das Objekt liste als Menge:\n", set(liste))
 
 menge = {1, 2, 3, 4, 5, 1000, ('tupel', 5), 'a', 123}
-print("Die Menge kann auch mit geschweiften Klammern erzeugt werden:", menge)
+print("Die Menge kann auch mit geschweiften Klammern erzeugt werden:", menge, sep = "\n")
 ```
 
 Mengen können beispielsweise für Vergleichsoperationen verwendet werden.
@@ -425,7 +425,7 @@ print("Dictionary nach dem Löschen", dictionary1)
 Die Sammeltypen können ineinander umgewandelt werden.
 
 ```{python}
-dictionary = {1: 'Kater', 2: 'Fähre', 3: 'Ricke'}
+dictionary = {1: 'Kater', 2: 'Fähe', 3: 'Ricke'}
 print( (liste := list(dictionary)) )
 print( (menge := set(liste)) )
 print( (tupel := tuple(menge)) )
@@ -461,14 +461,14 @@ print(modulo_3)
 ## Aufgaben Sammeltypen
 1. Modifizieren Sie den Programmcode in @lst-quadratzahlen so, dass nur die Quadratzahlen gespeichert werden, die ganzzahlig durch 3 teilbar sind.
 
-2. Umrechnung von Geschwindigkeiten
+2. Umrechnung von Geschwindigkeiten  
 Erstellen Sie ein Skript, welches eine Umrechnungstabelle für Geschwindigkeiten erzeugt. Folgende Randbedingungen sollen beachtet werden:
 
-* Die Umrechnung soll von km/h in m/s erfolgen.
+  * Die Umrechnung soll von km/h in m/s erfolgen.
 
-* Der Start- und Endwert soll in km/h frei wählbar sein, wobei beide ganzzahlig sein sollen.
+  * Der Start- und Endwert soll in km/h frei wählbar sein, wobei beide ganzzahlig sein sollen.
 
-* Die Anzahl der Umrechnungspunkte soll definiert werden können und die Zwischenschritte (in km/h) immer als ganze Zahlen ausgegeben werden.
+  * Die Anzahl der Umrechnungspunkte soll definiert werden können und die Zwischenschritte (in km/h) immer als ganze Zahlen ausgegeben werden.
 
 *Tipp: In Ihrem Skript können Sie die Funktion [input()](https://docs.python.org/3/library/functions.html#input) verwenden, um Werte per Eingabe zu erfassen.*
 

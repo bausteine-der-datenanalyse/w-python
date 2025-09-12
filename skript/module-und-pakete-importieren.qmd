@@ -6,11 +6,11 @@ Der Funktionsumfang von Python kann erheblich durch das Importieren von Modulen 
 
 Module
 : Module sind Dateien, die Funktionsdefinitionen enthalten.
-: Module werden durch das Schlüsselwort `import` und ihren Namen importiert, bspw. `import glob`
+: Module werden durch das Schlüsselwort `import` und ihren Namen importiert, bspw. `import glob`.
 
 Pakete
-: Pakete sind Sammlungen von Modulen
-: In Paketen enthaltene Module werden durch das Schlüsselwort `import` mit der Schreibeweise paket.modul importiert, bspw. `import matplotlib.pyplot`
+: Pakete sind Sammlungen von Modulen.
+: In Paketen enthaltene Module werden durch das Schlüsselwort `import` mit der Schreibeweise paket.modul importiert, bspw. `import matplotlib.pyplot`.
 
 :::
 

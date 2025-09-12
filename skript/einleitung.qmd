@@ -194,7 +194,7 @@ Die Anzahl der darzustellenden Nachkommastellen kann wie folgt festgelegt werden
 print(f"Das Verhältnis von {zahl1} zu {zahl2} ist {verhältnis:.2f}.")
 ```
 
-Das gleiche ist mit einem Wert möglich:
+Das Gleiche ist mit einem Wert möglich:
 ```{python}
 print(f"Das Verhältnis ist genauer {0.7142857142857143:.3f}.")
 ```
@@ -207,10 +207,10 @@ print(f"Das Verhältnis ist genauer {0.7142857142857143:07.3f}.")
 
 Das Dezimaltrennzeichen zählt als eine Stelle.
 
-Häufig verwendete Formatierung sind:
+Häufig verwendete Formatierungen sind:
 
 ::: {.panel-tabset}
-## ganze Zahlen
+## Ganze Zahlen
 Ganze Zahlen haben den Ausgabetyp `d`.
 
 | Formatierung | Ausgabe |
@@ -260,8 +260,4 @@ Eine Auflistung aller verfügbaren Ausgabetypen findet sich in der [Python Dokum
 
 &nbsp;  
 
-[@Arnold-2023-datentypen-und-grundlagen]
-
-[@Arnold-2023-funktionen-module-dateien]
-
-[@Arnold-2023-datenanalyse-python]
+[@Arnold-2023-datentypen-und-grundlagen; @Arnold-2023-funktionen-module-dateien; @Arnold-2023-datenanalyse-python]

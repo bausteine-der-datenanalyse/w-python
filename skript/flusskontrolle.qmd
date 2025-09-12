@@ -152,7 +152,7 @@ for Laufvariable in Sequenz:
   Anweisungsblock
 ```
 
-Zur Definition des Schleifenkopf gehören die beiden Schlüsselworte `for` und `in` und der Kopf wird mit einem Doppelpunkt `:` abgeschlossen. Auch hier wird der Anweisungsblock eingerückt.
+Zur Definition des Schleifenkopfs gehören die beiden Schlüsselworte `for` und `in` und der Kopf wird mit einem Doppelpunkt `:` abgeschlossen. Auch hier wird der Anweisungsblock eingerückt.
 
 Die Sequenz wird mit einem range-Objekt erstellt, das mit der Funktion `range(start = 0, stop, step = 1)` erzeugt wird. `range()` nimmt ganzzahlige Werte als *positionale Argumente* entgegen und erzeugt Ganzzahlen von `start` bis *nicht einschließlich* `stop` mit der Schrittweite `step`. Dabei ist wichtig, dass Python **exklusiv zählt**, das heißt, Python beginnt standarmäßig bei `0` zu zählen und der als Argument `stop` übergebene Wert wird nicht mitgezählt.
 
@@ -240,7 +240,7 @@ while x < 10:
 
 ### Ausnahmebehandlung
 
-Die Ausnahmebehandlung erlaubt es, Python alternative Anweisungen zu geben, die beim Auftreten eines Fehlers ausgeführt werden sollen. Dies ist beispielsweise beim Einlesen von Datensätzen nützlich, um sich die Ursache von Fehlermeldungen ausgeben zu lassen - eine Technik, die im [Methodenbaustein Einlesen strukturierter Datensätze](https://bausteine-der-datenanalyse.github.io/m-einlesen-strukturierter-datens-tze/einlesen-strukturierter-datens%C3%A4tze.html) vorgestellt wird. 
+Die Ausnahmebehandlung erlaubt es, Python alternative Anweisungen zu geben, die beim Auftreten eines Fehlers ausgeführt werden sollen. Dies ist beispielsweise beim Einlesen von Datensätzen nützlich, um sich die Ursache von Fehlermeldungen ausgeben zu lassen - eine Technik, die im [Methodenbaustein Einlesen strukturierter Datensätze](https://bausteine-der-datenanalyse.github.io/m-einlesen-strukturierter-datensaetze/output/book/) vorgestellt wird. 
 
 In Python gibt es zwei Arten von Fehlern. Dies sind erstens Syntaxfehler, die Python mit einer Fehlermeldung ähnlich wie der folgenden quitiert. Syntaxfehler werden durch das Schreiben von syntaktisch korrektem Programmcode behoben.
 ```{python}
@@ -348,9 +348,9 @@ else:
 ```
 
 ## Aufgaben Flusskontrolle
-1. Schreiben Sie ein Programm, dass von 1 bis 25 und von 38 bis 50 zählt und jeden Wert, der ganzzahlig durch 7 teilbar ist, mit `print()` ausgibt.
+1. Schreiben Sie ein Programm, das von 1 bis 25 und von 38 bis 50 zählt und jeden Wert, der ganzzahlig durch 7 teilbar ist, mit `print()` ausgibt.
 
-2. Roulette: Schreiben Sie ein Programm, dass für eine Zahl prüft, ob diese im Wertebereich des Spieltischs liegt. Falls nein, soll eine Fehlermeldung ausgegeben werden. Falls ja, soll das Programm ausgeben, ob die Zahl
+2. Roulette: Schreiben Sie ein Programm, das für eine Zahl prüft, ob diese im Wertebereich des Spieltischs liegt. Falls nein, soll eine Fehlermeldung ausgegeben werden. Falls ja, soll das Programm ausgeben, ob die Zahl
 
   - gerade oder ungerade ist,
 

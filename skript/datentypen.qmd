@@ -43,7 +43,7 @@ print("Beim Lottogewinn in Exponentialschreibeweise zählt das Vorzeichen.")
 print(1e-3, "oder", 1e+3)
 ```
 
-Da Computer im Binärsystem arbeiten, können Dezimalzahlen nicht exakt gespeichert werden. Beispielsweise ist die Division von 1 durch 10 dezimal gleich 0.1. Binär ist 1~2~ durch 1010~2~ aber ein periodischer Bruch:
+Da Computer im Binärsystem arbeiten, können Dezimalzahlen nicht exakt gespeichert werden. Beispielsweise ist die Division von 1 durch 10 dezimal gleich 0,1. Binär ist 1~2~ durch 1010~2~ aber ein periodischer Bruch:
 $$ \frac{1_2}{1010_2} ~ {=} ~ 0,000\overline{1100}_2 $$
 
 Dezimalzahlen müssen deshalb als Bruch zweier Ganzzahlen approximiert werden (Der Binärbruch, der 0.1 annähert, ist in Dezimalschreibweise 3602879701896397 / 2^55^). Dadurch kommt es vor, dass mehrere Gleitkommazahlen durch die selbe Binärapproximation repräsentiert werden. Python gibt zwar die jeweils kürzeste Dezimalzahl aus, da Berechnungen aber binär durchgeführt werden, kann sich bei Berechnungen die nächste Binärapproximation und damit die zugehörige kürzeste Dezimalzahl ändern (weitere Informationen in der [Python Dokumentation](https://docs.python.org/3/tutorial/floatingpoint.html)). 
@@ -113,7 +113,7 @@ print("Ist 10 größer als 9?", 10 > 9)
 print("Ist 11 kleiner als 10?", 11 < 10)
 print("Ist 10 genau 10.0?", 10 == 10.0, "\n")
 
-print("True und False können mit + addiert:", True + False)
+print("True und False können mit + addiert werden:", True + False)
 print("... und mit * multipliziert werden:", True * False, "\n")
 ```
 
@@ -253,8 +253,8 @@ print('a' or 'b', 'a' and 'b')
 ## Aufgaben Zeichenfolgen
 **Lösen Sie die Aufgaben mit Python.**
 
-1. Was passiert, wenn Sie die Zeichenfolge "Python" mit "for beginners" addieren?
-2. Erzeugen Sie eine Zeichenfolge, die 10 mal die Zeichenfolge "tick tack".
+1. Was passiert, wenn Sie die Zeichenfolge "Python" mit " für Anfänger" addieren?
+2. Erzeugen Sie eine Zeichenfolge, die 10 mal die Zeichenfolge "tick tack" enthält.
 3. Welche Zeichenfolge ist kleiner, "Aachen" oder "Bern". Warum ist das so, wie werden Zeichenfolgen verglichen?
 4. Geben Sie den Dateipfad aus: "~\\home\\tobi\\neue_daten"
 
@@ -332,7 +332,7 @@ In dem obenstehenden Code-Block wurde der sogenannte [Walross-Operator](https://
 | a //= 2 | a = a // 2 |
 | a **= 2 | a = a ** 2 |
 
-::: {.callout-tip collapse="false"}
+::: {#tip-zuweisung .callout-tip collapse="false"}
 ## Lesbare Zuweisungen
 Die in der Tabelle gezeigten Zuweisungsoperatoren sind für jemanden, der*die Ihren Code liest, gut zu lesen und  nachzuvollziehen, da Zuweisungen immer am Beginn einer Zeile, also ganz links, stehen.
 
@@ -344,7 +344,7 @@ Für die Benennung von Variablen gibt es (meist) nur wenige Vorgaben. Trotzdem i
 
 Falls Sie sich nicht erinnern können, dann ist dieses Beispiel gelungen: Die Namensgebung dieser Variablen ist alles andere als gut. Die Auflösung steht im folgenden Aufklapper.
 
-::: {.callout-tip collapse="true"}
+::: {#tip-lösungvariablen .callout-tip collapse="true"}
 ## Auflösung Variablen
 
 ```{python}
@@ -364,7 +364,7 @@ print(a, type(a))
 Deshalb empfiehlt es sich "sprechende", das heißt selbsterklärende, Variablennamen zu vergeben. Unter selbsterklärenden Variablennamen versteht sich, dass der Variablenname den Inhalt der Variable beschreibt. Wird bspw. in einer Variable der Studienabschluss gespeichert, so kann diese mit `academic_degree` oder `studienabschluss` bezeichnet werden. Werden Daten aus verschiedenen Jahren verarbeitet, kann das Jahr zu besseren Unterscheidbarkeit in den Variablennamen einfließen, etwa: `academic_degree_2023` oder `studienabschluss2024`. Dies verbessert die Lesbarkeit des Codes und vereinfacht die Benutzung der Variable. Mehr Informationen finden sich in [diesem Wikipedia Abschnitt](https://de.wikipedia.org/wiki/Variable_(Programmierung)#Namenswahl). 
 
 
-::: {.callout-warning}
+::: {#wrn-schlüsselwörter .callout-warning}
 ## Schlüsselwörter und Funktionsnamen
 
 In Python reservierte Schlüsselwörter und Funktionsnamen sind ungeeignete Variablennamen. Während Python die Wertzuweisung zu Schlüsselwörtern wie `True` oder `break` mit einem Syntaxfehler quittiert, lassen sich Funktionsnamen neue Werte zuweisen, beispielsweise mit `print = 6`. Wenn Sie die Funktion print dann aufrufen, funktioniert diese natürlich nicht mehr. In diesem Fall müssen Sie die Zuweisung aus dem Skript entfernen und Python neu starten.
@@ -416,6 +416,4 @@ Geben Sie nicht nur den Wert von $x(t)$ in Kilometer aus, sondern betten ihn in 
 
 :::
 
-[@Arnold-2023-datentypen-und-grundlagen]
-
-[@Arnold-2023-funktionen-module-dateien]
+[@Arnold-2023-datentypen-und-grundlagen; @Arnold-2023-funktionen-module-dateien]

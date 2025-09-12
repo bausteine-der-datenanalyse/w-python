@@ -1,7 +1,7 @@
 # Funktionen: Grundlagen
 Funktionen sind Unterprogramme, die Programmanweisungen bündeln, damit Programmteile mehrfach verwendet werden können. Auf diese Weise kann ein Programm schneller geschrieben werden und ist auch leichter lesbar. Python bringt, wie Sie der [Dokumentation](https://docs.python.org/3/library/functions.html) entnehmen können, eine überschaubare Anzahl von grundlegenden Funktionen mit. In diesem Kapitel wird die allgemeine Verwendung der in Python enthaltenen Funktionen vermittelt.
 
-Python wird dynamisch weiterentwickelt: regelmäßig erscheinen neue Versionen mit neuen Eigenschaften. In diesem Kapitel wird deshalb mit einer Reihe von Tipps auch vermittelt, wie die Dokumentation von Python zu lesen ist. Dies erfolgt auch in Hinblick auf die Möglichkeit, Python umfangreich durch Module zu erweitern. So haben beispielsweise die Funktionen des Moduls Pandas nicht selten dutzende dokumentierte Parameter.
+Python wird dynamisch weiterentwickelt: Regelmäßig erscheinen neue Versionen mit neuen Eigenschaften. In diesem Kapitel wird deshalb mit einer Reihe von Tipps auch vermittelt, wie die Dokumentation von Python zu lesen ist. Dies erfolgt auch in Hinblick auf die Möglichkeit, Python umfangreich durch Module zu erweitern. So haben beispielsweise die Funktionen des Moduls Pandas nicht selten dutzende dokumentierte Parameter.
 
 ::: {#tip-dokumentation .callout-tip collapse="false"}
 ## Dokumentation
@@ -52,7 +52,7 @@ print(bool(sum([1, 2])))
 ```
 
 ### Methoden
-Methoden sind eine Besonderheit objektorientierter Programmiersprachen. Im vorherigen Kapitel wurde erläutert, dass in Python Objekte zu einem bestimmten Typ bzw. zu einer Klasse gehören und abhängig von den in ihnen gespeicherten Werte einen passenden Datentyp erhalten. Methoden sind Funktionen, die zu einer bestimmten Klasse gehören und nur für Objekte dieser Klasse verfügbar sind. Methoden können auch für mehrere Klassen definiert sein. Methoden werden getrennt durch einen Punkt `.` hinter Objekten mit ihrem Namen aufgerufen: `variable.methode` bzw. `(wert).methode`. Beispielsweise sind `.upper()`, `.lower()` und `.title` für Zeichenfolgen definierte Methoden.
+Methoden sind eine Besonderheit objektorientierter Programmiersprachen. Im vorherigen Kapitel wurde erläutert, dass in Python Objekte zu einem bestimmten Typ bzw. zu einer Klasse gehören und abhängig von den in ihnen gespeicherten Werte einen passenden Datentyp erhalten. Methoden sind Funktionen, die zu einer bestimmten Klasse gehören und nur für Objekte dieser Klasse verfügbar sind. Methoden können auch für mehrere Klassen definiert sein. Methoden werden getrennt durch einen Punkt `.` hinter Objekten mit ihrem Namen aufgerufen: `variable.methode` bzw. `(wert).methode`. Beispielsweise sind `.upper()`, `.lower()` und `.title()` für Zeichenfolgen definierte Methoden.
 
 ```{python}
 toller_text = "Python 3.12 ist großartig."
@@ -174,7 +174,7 @@ verbose : bool, default False
 
 :::
 
-  - Argumente können in Python entweder als positionales Argument übergeben werden Das heißt, Python erwartet Argumente in einer feststehenden Reihenfolge entsprechend der Parameter der Funktionsdefinition. Alternativ können Argumente als Schlüsselwort übergeben werden, die Zuordnung von Eingaben erfolgt über den Namen des Parameters. Standardmäßig können Argumente positional oder per Schlüsselwort übergeben werden. Abweichungen davon werden durch die Symbole `*` und `/` gekennzeichnet (siehe folgenden Tipp).
+  - Argumente können in Python entweder als positionales Argument übergeben werden. Das heißt, Python erwartet Argumente in einer feststehenden Reihenfolge entsprechend der Parameter der Funktionsdefinition. Alternativ können Argumente als Schlüsselwort übergeben werden, die Zuordnung von Eingaben erfolgt über den Namen des Parameters. Standardmäßig können Argumente positional oder per Schlüsselwort übergeben werden. Abweichungen davon werden durch die Symbole `*` und `/` gekennzeichnet (siehe folgenden Tipp).
 
 ::: {#tip-sonderzeichen .callout-tip collapse="true"}
 ## Positionale und Schlüsselwortargumente, *args und **kwargs

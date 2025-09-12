@@ -1,5 +1,5 @@
 # Dateien lesen und schreiben
-Maya und Hans haben je sechs Mal einen Würfel geworfen und ihre Wurfergebnisse in einer .txt-Datei protokolliert. Wir wollen mit die Dateien mit Python auswerten, um zu bestimmen, wer von beiden in Summe die höchste Augenzahl erreicht hat.
+Maya und Hans haben je sechs Mal einen Würfel geworfen und ihre Wurfergebnisse in einer .txt-Datei protokolliert. Wir wollen die Dateien mit Python auswerten, um zu bestimmen, wer von beiden in Summe die höchste Augenzahl erreicht hat.
 
 | Daten | Dateiname |
 |---|------|
@@ -128,8 +128,8 @@ Die Attribute der Datei können mit entsprechenden Befehlen abgerufen werden.
 print(f"Dateipfad: {daten_maya.name}\n"
       f"Dateiname: {os.path.basename(daten_maya.name)}\n"
       f"Datei ist geschlossen: {daten_maya.closed}\n"
-      f"Zugriffsmodus: {daten_maya.mode}"
-      f"Enkodierung: : {daten_maya.encoding}")
+      f"Zugriffsmodus: {daten_maya.mode}\n"
+      f"Enkodierung: {daten_maya.encoding}")
 
 
 ```
