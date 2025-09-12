@@ -93,7 +93,7 @@ div.csl-indent {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-e018ad72096c98ab8170000a0dfe2dea.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-130c2ef3da62f04209ff5e2fb00d8304.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -272,29 +272,29 @@ Definition&nbsp;8.1: Module und Pakete
 Module sind Dateien, die Funktionsdefinitionen enthalten.
 </dd>
 <dd>
-Module werden durch das Schlüsselwort <code>import</code> und ihren Namen importiert, bspw. <code>import glob</code>
+Module werden durch das Schlüsselwort <code>import</code> und ihren Namen importiert, bspw. <code>import glob</code>.
 </dd>
 <dt>Pakete</dt>
 <dd>
-Pakete sind Sammlungen von Modulen
+Pakete sind Sammlungen von Modulen.
 </dd>
 <dd>
-In Paketen enthaltene Module werden durch das Schlüsselwort <code>import</code> mit der Schreibeweise paket.modul importiert, bspw. <code>import matplotlib.pyplot</code>
+In Paketen enthaltene Module werden durch das Schlüsselwort <code>import</code> mit der Schreibeweise paket.modul importiert, bspw. <code>import matplotlib.pyplot</code>.
 </dd>
 </dl>
 </div>
 </div>
 <p>Module und Pakete werden mit dem Schlüsselwort <code>import</code> in Python geladen. Beispielsweise kann das für die Erzeugung (pseudo-)zufälliger Zahlen zuständige Modul random mit dem Befehl <code>import random</code> eingebunden werden. Anschließend stehen die Funktionen des Moduls unter dem Modulnamen in der Schreibweise <code>modul.funktion()</code> zur Verfügung.</p>
-<div id="2606c1ee" class="cell" data-execution_count="1">
+<div id="93671ee5" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(random.randint(<span class="dv">1</span>, <span class="dv">10</span>)) <span class="co"># Zufällige Ganzzahl zwischen 1 und 10</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>9</code></pre>
+<pre><code>3</code></pre>
 </div>
 </div>
 <p>Das Paket Matplotlib bringt viele Funktionen zur grafischen Darstellung von Daten mit. Das Modul <code>matplotlib.pyplot</code> stellt eine Schnittstelle zu den enthaltenen Funktionen dar.</p>
-<div id="de675161" class="cell" data-execution_count="2">
+<div id="d9a5bec9" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>zufallsdaten <span class="op">=</span> [] <span class="co"># leere Liste anlegen</span></span>
@@ -306,7 +306,7 @@ In Paketen enthaltene Module werden durch das Schlüsselwort <code>import</code>
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="module-und-pakete-importieren_files/figure-html/cell-3-output-1.png" alt="Darstellung von zehn Zufallszahlen ohne inhaltliche Bedeutung" width="558" height="411" class="figure-img"></p>
+<p><img src="module-und-pakete-importieren_files/figure-html/cell-3-output-1.png" class="img-fluid figure-img" alt="Darstellung von zehn Zufallszahlen ohne inhaltliche Bedeutung"></p>
 <figcaption>Grafik mit dem Modul pyplot aus dem Paket matplotlib</figcaption>
 </figure>
 </div>
@@ -324,11 +324,11 @@ Hinweis&nbsp;8.1: Namensraum direkt einbinden
 </div>
 <div class="callout-body-container callout-body">
 <p>In Python ist es auch möglich, Funktionen direkt in den Namensraum von Python zu importieren, sodass diese ohne die Schreibweise <code>modul.funktion()</code> aufgerufen werden können. Dies ist mit dem Schlüsselwort <code>from</code> möglich.</p>
-<div id="59412de2" class="cell" data-execution_count="3">
+<div id="89d8b44a" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> random <span class="im">import</span> randint</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Die Funktion randint steht nun direkt zur Verfügung: </span><span class="sc">{</span>randint(<span class="dv">1</span>, <span class="dv">100</span>)<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Die Funktion randint steht nun direkt zur Verfügung: 70</code></pre>
+<pre><code>Die Funktion randint steht nun direkt zur Verfügung: 62</code></pre>
 </div>
 </div>
 <p>Durch <code>from modulname import *</code> ist es sogar möglich, alle Funktionen aus einem Modul in den Namensraum von Python zu importieren. Im Allgemeinen sollte das direkte Importieren von Funktionen oder eines ganzen Moduls in den Namensraum von Python jedoch unterlassen werden. Einerseits wird damit eine Namensraumkollision riskiert, beispielsweise gibt es die Funktion <code>sum()</code> in der Pythonbasis, in NumPy und in Pandas. Andererseits wird der Programmcode dadurch weniger nachvollziehbar, da nicht mehr überall ersichtlich ist, aus welchem Modul eine verwendete Funktion stammt.</p>
@@ -337,14 +337,14 @@ Hinweis&nbsp;8.1: Namensraum direkt einbinden
 <section id="import-as" class="level2" data-number="8.1">
 <h2 data-number="8.1" class="anchored" data-anchor-id="import-as"><span class="header-section-number">8.1</span> import as</h2>
 <p>Um lange Modulnamen zu vereinfachen, kann beim Importieren das Schlüsselwort <code>as</code> verwendet werden, um dem Modul einen neuen Namen zuzuweisen.</p>
-<div id="21eaf75b" class="cell" data-execution_count="4">
+<div id="478fabaf" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>plt.plot(zufallsdaten)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="module-und-pakete-importieren_files/figure-html/cell-5-output-1.png" alt="Darstellung von zehn Zufallszahlen ohne inhaltliche Bedeutung" width="558" height="411" class="figure-img"></p>
+<p><img src="module-und-pakete-importieren_files/figure-html/cell-5-output-1.png" class="img-fluid figure-img" alt="Darstellung von zehn Zufallszahlen ohne inhaltliche Bedeutung"></p>
 <figcaption>Grafik mit dem Modul pyplot aus dem Paket matplotlib</figcaption>
 </figure>
 </div>
