@@ -14,7 +14,7 @@
     "href": "index.html#voraussetzungen",
     "title": "Bausteine Computergestützter Datenanalyse",
     "section": "Voraussetzungen",
-    "text": "Voraussetzungen\nKeine Voraussetzungen, hilfreich ist der w-Pseudocode\nQuerverweis auf:\n\nw-NumPy\nw-Pandas",
+    "text": "Voraussetzungen\nKeine Voraussetzungen, hilfreich ist der Werkzeugbaustein Pseudocode",
     "crumbs": [
       "Werkzeugbaustein Python"
     ]
@@ -24,7 +24,7 @@
     "href": "index.html#lernziele",
     "title": "Bausteine Computergestützter Datenanalyse",
     "section": "Lernziele",
-    "text": "Lernziele\nIn diesem Bausteine werden die Grundzüge der Programmierung mit Python vermittelt. In diesem Baustein lernen Sie …\n\nGrundbegriffe der objektorientierten Programmierung kennen.\nPython-Code zu schreiben, Variablen zu erstellen, Operationen durchzuführen und die Ausgabe zu formatieren.\ndie Dokumentation zu lesen und zu verwenden\ndie exklusive Zählweise von Python kennen.\nden Unterschied zwischen Funktionen und Methoden kennen und wie eigene Funktionen geschrieben werden.\nModule und Pakete laden\n\nQuerverweis auf:\n\nMethodenbaustein Einlesen strukturierter Datensätze",
+    "text": "Lernziele\nIn diesem Bausteine werden die Grundzüge der Programmierung mit Python vermittelt. In diesem Baustein lernen Sie …\n\nGrundbegriffe der objektorientierten Programmierung kennen.\nPython-Code zu schreiben, Variablen zu erstellen, Operationen durchzuführen und die Ausgabe zu formatieren.\ndie Dokumentation zu lesen und zu verwenden\ndie exklusive Zählweise von Python kennen.\nden Unterschied zwischen Funktionen und Methoden kennen und wie eigene Funktionen geschrieben werden.\nModule und Pakete laden",
     "crumbs": [
       "Werkzeugbaustein Python"
     ]
