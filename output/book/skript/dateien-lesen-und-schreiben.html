@@ -94,7 +94,7 @@ div.csl-indent {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-e018ad72096c98ab8170000a0dfe2dea.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-130c2ef3da62f04209ff5e2fb00d8304.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -267,7 +267,7 @@ div.csl-indent {
 </header>
 
 
-<p>Maya und Hans haben je sechs Mal einen Würfel geworfen und ihre Wurfergebnisse in einer .txt-Datei protokolliert. Wir wollen mit die Dateien mit Python auswerten, um zu bestimmen, wer von beiden in Summe die höchste Augenzahl erreicht hat.</p>
+<p>Maya und Hans haben je sechs Mal einen Würfel geworfen und ihre Wurfergebnisse in einer .txt-Datei protokolliert. Wir wollen die Dateien mit Python auswerten, um zu bestimmen, wer von beiden in Summe die höchste Augenzahl erreicht hat.</p>
 <table class="table">
 <thead>
 <tr class="header">
@@ -293,7 +293,7 @@ div.csl-indent {
 <section id="dateipfad" class="level3">
 <h3 class="anchored" data-anchor-id="dateipfad">Dateipfad</h3>
 <p>Der lokale Dateipfad wird ausgehend vom aktuellen Arbeitsverzeichnis angegeben.</p>
-<div id="04209d68" class="cell" data-execution_count="1">
+<div id="a75dba92" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>pfad_maya <span class="op">=</span> <span class="st">"01-daten/dice-maya.txt"</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>pfad_hans <span class="op">=</span> <span class="st">"01-daten/dice-hans.txt"</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -310,7 +310,7 @@ Tipp&nbsp;7.1: Arbeitsverzeichnis in Python ermitteln und wechseln
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Der Pfad des aktuellen Arbeitsverzeichnisses kann mit dem Modul os mittels <code>os.getcwd()</code> ermittelt werden (hier ohne Ausgabe). Mit <code>os.chdir('neuer_pfad')</code> kann das Arbeitsverzeichnis ggf. gewechselt werden. Die korrekte Formatierung des Pfads erkennen Sie an der Ausgabe von <code>os.getcwd()</code>.</p>
-<div id="93829eb1" class="cell" data-execution_count="2">
+<div id="b1e93c46" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(os.getcwd())</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -363,7 +363,7 @@ Tipp&nbsp;7.1: Arbeitsverzeichnis in Python ermitteln und wechseln
 <p>&nbsp;</p>
 <p>Die Zugriffsmodi können auch kombiniert werden. Weitere Informationen dazu finden Sie in der <a href="https://docs.python.org/3/library/functions.html#open">Dokumentation</a>. Sofern nicht im Binärmodus auf Dateien zugegriffen wird, liefert die Funktion <code>open()</code> den Dateiinhalt als string zurück.</p>
 <p>Im Lesemodus wird ein Datenobjekt erzeugt.</p>
-<div id="681f6ea7" class="cell" data-execution_count="3">
+<div id="f8aa884b" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>daten_maya <span class="op">=</span> <span class="bu">open</span>(pfad_maya, mode <span class="op">=</span> <span class="st">'r'</span>)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(daten_maya)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -371,7 +371,7 @@ Tipp&nbsp;7.1: Arbeitsverzeichnis in Python ermitteln und wechseln
 </div>
 </div>
 <p>Wenn das Datenobjekt <code>daten_maya</code> der Funktion <code>print()</code> übergeben wird, gibt Python die Klasse des Objekts zurück, in diesem Fall also _io.TextIOWrapper. Diese Klasse stammt aus dem Modul io und ist für das Lesen und Schreiben von Textdateien zuständig. Ebenfalls werden als Attribute des Dateiobjekts der Dateipfad, der Zugriffsmodus und die Enkodierung der Datei ausgegeben (siehe <a href="#nte-attribute" class="quarto-xref">Beispiel&nbsp;<span>7.1</span></a>). Sollte die Enkodierung nicht automatisch als UTF-8 erkannt werden, kann diese mit dem Argument <code>encoding = 'UTF-8'</code> übergeben werden.</p>
-<div id="55ea0503" class="cell" data-execution_count="4">
+<div id="f63a9aa0" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>daten_maya <span class="op">=</span> <span class="bu">open</span>(pfad_maya, mode <span class="op">=</span> <span class="st">'r'</span>, encoding <span class="op">=</span> <span class="st">'UTF-8'</span>)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(daten_maya)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -391,14 +391,14 @@ Beispiel&nbsp;7.1: Attribute eines Objekts bestimmen
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Mit der Funktion <code>dir(objekt)</code> können die verfügbaren Attribute eines Objekts ausgegeben werden. Dabei werden jedoch auch die vererbten Attribute und Methoden der Klasse des Objekts ausgegeben, sodass die Ausgabe oft sehr umfangreich ist. Zum Beispiel für die Ganzzahl 1:</p>
-<div id="15d02331" class="cell" data-execution_count="5">
+<div id="7d2e6fa6" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">dir</span>(<span class="dv">1</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>['__abs__', '__add__', '__and__', '__bool__', '__ceil__', '__class__', '__delattr__', '__dir__', '__divmod__', '__doc__', '__eq__', '__float__', '__floor__', '__floordiv__', '__format__', '__ge__', '__getattribute__', '__getnewargs__', '__gt__', '__hash__', '__index__', '__init__', '__init_subclass__', '__int__', '__invert__', '__le__', '__lshift__', '__lt__', '__mod__', '__mul__', '__ne__', '__neg__', '__new__', '__or__', '__pos__', '__pow__', '__radd__', '__rand__', '__rdivmod__', '__reduce__', '__reduce_ex__', '__repr__', '__rfloordiv__', '__rlshift__', '__rmod__', '__rmul__', '__ror__', '__round__', '__rpow__', '__rrshift__', '__rshift__', '__rsub__', '__rtruediv__', '__rxor__', '__setattr__', '__sizeof__', '__str__', '__sub__', '__subclasshook__', '__truediv__', '__trunc__', '__xor__', 'as_integer_ratio', 'bit_length', 'conjugate', 'denominator', 'from_bytes', 'imag', 'numerator', 'real', 'to_bytes']</code></pre>
+<pre><code>['__abs__', '__add__', '__and__', '__bool__', '__ceil__', '__class__', '__delattr__', '__dir__', '__divmod__', '__doc__', '__eq__', '__float__', '__floor__', '__floordiv__', '__format__', '__ge__', '__getattribute__', '__getnewargs__', '__getstate__', '__gt__', '__hash__', '__index__', '__init__', '__init_subclass__', '__int__', '__invert__', '__le__', '__lshift__', '__lt__', '__mod__', '__mul__', '__ne__', '__neg__', '__new__', '__or__', '__pos__', '__pow__', '__radd__', '__rand__', '__rdivmod__', '__reduce__', '__reduce_ex__', '__repr__', '__rfloordiv__', '__rlshift__', '__rmod__', '__rmul__', '__ror__', '__round__', '__rpow__', '__rrshift__', '__rshift__', '__rsub__', '__rtruediv__', '__rxor__', '__setattr__', '__sizeof__', '__str__', '__sub__', '__subclasshook__', '__truediv__', '__trunc__', '__xor__', 'as_integer_ratio', 'bit_count', 'bit_length', 'conjugate', 'denominator', 'from_bytes', 'imag', 'is_integer', 'numerator', 'real', 'to_bytes']</code></pre>
 </div>
 </div>
 <p>Um die Ausgabe auf Attribute einzugrenzen, kann folgende Funktion verwendet werden:</p>
-<div id="14d516ce" class="cell" data-execution_count="6">
+<div id="a57842ef" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>objekt <span class="op">=</span> <span class="dv">1</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>attribute <span class="op">=</span> [attr <span class="cf">for</span> attr <span class="kw">in</span> <span class="bu">dir</span>(objekt) <span class="cf">if</span> <span class="kw">not</span> <span class="bu">callable</span> (<span class="bu">getattr</span>(objekt, attr))]</span>
@@ -408,7 +408,7 @@ Beispiel&nbsp;7.1: Attribute eines Objekts bestimmen
 </div>
 </div>
 <p>Mit doppelten Unterstrichen umschlossene Attribute sind für Python reserviert und nicht für den:die Nutzer:in gedacht. Folgende Funktion entfernt Attribute mit doppelten Unterstrichen aus der Ausgabe:</p>
-<div id="7e118ab1" class="cell" data-execution_count="7">
+<div id="dfe5e3cb" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>objekt <span class="op">=</span> <span class="dv">1</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>attribute <span class="op">=</span> [attr <span class="cf">for</span> attr <span class="kw">in</span> <span class="bu">dir</span>(objekt) <span class="cf">if</span> <span class="kw">not</span> (<span class="bu">callable</span>(<span class="bu">getattr</span>(objekt, attr)) <span class="kw">or</span> attr.startswith(<span class="st">'__'</span>))]</span>
@@ -418,14 +418,14 @@ Beispiel&nbsp;7.1: Attribute eines Objekts bestimmen
 </div>
 </div>
 <p>Im Fall einer Ganzzahl können Attribute (zur Abgrenzung von Gleitkommazahlen in umschließenden Klammern) wie folgt aufgerufen werden:</p>
-<div id="3ce1f271" class="cell" data-execution_count="8">
+<div id="8363a288" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>(<span class="dv">1</span>).numerator</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="8">
 <pre><code>1</code></pre>
 </div>
 </div>
 <p>Wenn wir uns die Attribute des Dateiobjekts ‘daten_maya’ ansehen, fallen Attribute mit einem einzelnen führenden Unterstrich auf.</p>
-<div id="44768f82" class="cell" data-execution_count="9">
+<div id="8804eee0" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>objekt <span class="op">=</span> daten_maya</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>attribute <span class="op">=</span> [attr <span class="cf">for</span> attr <span class="kw">in</span> <span class="bu">dir</span>(objekt) <span class="cf">if</span> <span class="kw">not</span> (<span class="bu">callable</span>(<span class="bu">getattr</span>(objekt, attr)) <span class="kw">or</span> attr.startswith(<span class="st">'__'</span>))]</span>
@@ -435,7 +435,7 @@ Beispiel&nbsp;7.1: Attribute eines Objekts bestimmen
 </div>
 </div>
 <p>Hierbei handelt es sich um Attribute, die nicht durch den:die Nutzer:in aufgerufen werden sollen (weitere Informationen dazu finden Sie <a href="https://dbader.org/blog/meaning-of-underscores-in-python">hier</a>). Folgender Programmcode gibt alle Attribute ohne führende Unterstriche aus:</p>
-<div id="85dcc802" class="cell" data-execution_count="10">
+<div id="e7e63d92" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>objekt <span class="op">=</span> daten_maya</span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>attribute <span class="op">=</span> [attr <span class="cf">for</span> attr <span class="kw">in</span> <span class="bu">dir</span>(objekt) <span class="cf">if</span> <span class="kw">not</span> (<span class="bu">callable</span>(<span class="bu">getattr</span>(objekt, attr)) <span class="kw">or</span> attr.startswith(<span class="st">'_'</span>))]</span>
@@ -448,17 +448,18 @@ Beispiel&nbsp;7.1: Attribute eines Objekts bestimmen
 </div>
 </div>
 <p>Die Attribute der Datei können mit entsprechenden Befehlen abgerufen werden.</p>
-<div id="b26b644c" class="cell" data-execution_count="11">
+<div id="1a2b904e" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Dateipfad: </span><span class="sc">{</span>daten_maya<span class="sc">.</span>name<span class="sc">}</span><span class="ch">\n</span><span class="ss">"</span></span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>      <span class="ss">f"Dateiname: </span><span class="sc">{</span>os<span class="sc">.</span>path<span class="sc">.</span>basename(daten_maya.name)<span class="sc">}</span><span class="ch">\n</span><span class="ss">"</span></span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>      <span class="ss">f"Datei ist geschlossen: </span><span class="sc">{</span>daten_maya<span class="sc">.</span>closed<span class="sc">}</span><span class="ch">\n</span><span class="ss">"</span></span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>      <span class="ss">f"Zugriffsmodus: </span><span class="sc">{</span>daten_maya<span class="sc">.</span>mode<span class="sc">}</span><span class="ss">"</span></span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>      <span class="ss">f"Enkodierung: : </span><span class="sc">{</span>daten_maya<span class="sc">.</span>encoding<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>      <span class="ss">f"Zugriffsmodus: </span><span class="sc">{</span>daten_maya<span class="sc">.</span>mode<span class="sc">}</span><span class="ch">\n</span><span class="ss">"</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>      <span class="ss">f"Enkodierung: </span><span class="sc">{</span>daten_maya<span class="sc">.</span>encoding<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Dateipfad: 01-daten/dice-maya.txt
 Dateiname: dice-maya.txt
 Datei ist geschlossen: False
-Zugriffsmodus: rEnkodierung: : UTF-8</code></pre>
+Zugriffsmodus: r
+Enkodierung: UTF-8</code></pre>
 </div>
 </div>
 <div id="tip-rückfalloption" class="callout callout-style-default callout-tip callout-titled">
@@ -481,7 +482,7 @@ Tipp&nbsp;7.2: Rückfalloption
 <section id="sec-dateiinhalt" class="level3">
 <h3 class="anchored" data-anchor-id="sec-dateiinhalt">Dateiinhalt ausgeben</h3>
 <p>Um den Dateiinhalt auszugeben, kann das Datenobjekt mit einer Schleife zeilenweise durchlaufen und ausgegeben werden. (Die Datei dice-maya hat nur eine Zeile.)</p>
-<div id="bdaf62f1" class="cell" data-execution_count="12">
+<div id="d3e6a55a" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> zeile <span class="kw">in</span> daten_maya:</span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Inhalt Zeile </span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">, mit </span><span class="sc">{</span><span class="bu">len</span>(zeile)<span class="sc">}</span><span class="ss"> Zeichen:"</span>)</span>
@@ -498,7 +499,7 @@ Tipp&nbsp;7.2: Rückfalloption
 <section id="dateien-einlesen" class="level2" data-number="7.2">
 <h2 data-number="7.2" class="anchored" data-anchor-id="dateien-einlesen"><span class="header-section-number">7.2</span> Dateien einlesen</h2>
 <p>Um den gesamten Inhalt einer Datei einzulesen, kann die Methode <a href="https://docs.python.org/3/tutorial/inputoutput.html">datenobjekt.read()</a> verwendet werden. Die Methode hat als optionalen Parameter <code>.read(size)</code>. size wird als Ganzzahl übergeben und entsprechend viele Zeichen (im Binärmodus entsprechend viele Bytes) werden ggf. bis zum Dateiende ausgelesen. Der Parameter <code>size</code> ist nützlich, um die Formatierung des Inhalts einer großen Datei zu prüfen und dabei die Ausgabe auf eine überschaubare Anzahl von Zeichen zu begrenzen.</p>
-<div id="98ed49de" class="cell" data-execution_count="13">
+<div id="102be24e" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>augen_maya <span class="op">=</span> daten_maya.read()</span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"len(augen_maya): </span><span class="sc">{</span><span class="bu">len</span>(augen_maya)<span class="sc">}</span><span class="ch">\n\n</span><span class="ss">"</span></span>
@@ -550,7 +551,7 @@ Abbildung&nbsp;7.1: Bewegung des Dateizeigers beim Auslesen von drei Zeichen
 </div>
 </div>
 <p>Wird der Dateizeiger mit der Methode <code>datenobjekt.seek(0)</code> an den Dateianfang gestellt, gelingt das Auslesen der Datei.</p>
-<div id="00ebcaf4" class="cell" data-results="hold" data-execution_count="14">
+<div id="d5177bcc" class="cell" data-results="hold" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Position des Dateizeigers vor dem Zurücksetzen auf 0: </span><span class="sc">{</span>daten_maya<span class="sc">.</span>tell()<span class="sc">}</span><span class="ss">"</span>)</span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>daten_maya.seek(<span class="dv">0</span>)<span class="op">;</span></span>
@@ -579,7 +580,7 @@ Tipp&nbsp;7.3: Musterlösung Dateizeiger bewegen
 </div>
 <div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="f5d5c09d" class="cell" data-execution_count="15">
+<div id="9fc1ad98" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>daten_maya.seek(<span class="dv">6</span>, <span class="dv">0</span>)<span class="op">;</span></span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(daten_maya.read(<span class="dv">1</span>))</span>
 <span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -594,14 +595,14 @@ Tipp&nbsp;7.3: Musterlösung Dateizeiger bewegen
 </div>
 </div>
 <p>Um Mayas Würfelergebnisse zu addieren, müssen die Zahlen extrahiert und in Ganzzahlen umgewandelt werden, da im Textmodus stets eine Zeichenfolge zurückgegeben wird.</p>
-<div id="f33a69d0" class="cell" data-execution_count="16">
+<div id="fad9ab01" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(augen_maya))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;class 'str'&gt;</code></pre>
 </div>
 </div>
 <p>Dazu werden mit der Methode <code>str.strip(")</code> das führende und abschließende Anführungszeichen entfernt sowie anschließend mit der Methode <code>str.split('", "')</code> die Zeichenfolge über das Trennzeichen in eine Liste aufgeteilt. Anschließend werden die Listenelemente in Ganzzahlen umgewandelt und summiert. (Methoden der string-Bearbeitung werden im nächsten Abschnitt ausführlich behandelt.)</p>
-<div id="161df5dc" class="cell" data-results="hold" data-execution_count="17">
+<div id="b531536b" class="cell" data-results="hold" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"augen_maya:</span><span class="ch">\n</span><span class="sc">{</span>augen_maya<span class="sc">}</span><span class="ss">"</span>)</span>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>augen_maya <span class="op">=</span> augen_maya.strip(<span class="st">'"'</span>)</span>
@@ -634,7 +635,7 @@ Summe Augen: 23</code></pre>
 <section id="datei-schließen" class="level4">
 <h4 class="anchored" data-anchor-id="datei-schließen">Datei schließen</h4>
 <p>Nach dem Zugriff auf die Datei, muss diese wieder geschlossen werden, um diese für andere Programme freizugeben.</p>
-<div id="a77eb18c" class="cell" data-execution_count="18">
+<div id="47077d6f" class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>daten_maya.close()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="wrn-Schreiboperationen" class="callout callout-style-simple callout-warning callout-titled">
@@ -668,7 +669,7 @@ Tipp&nbsp;7.4: Musterlösung Augenzahlvergleich
 <div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="border">
-<div id="d2903a6d" class="cell" data-execution_count="19">
+<div id="fd051e14" class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Erst Einlesen der Datei:</span></span>
 <span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>daten_hans <span class="op">=</span> <span class="bu">open</span>(pfad_hans, mode <span class="op">=</span> <span class="st">'r'</span>, encoding <span class="op">=</span> <span class="st">'UTF-8'</span>)</span>
 <span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>augen_hans <span class="op">=</span> daten_hans.read()</span>
@@ -724,7 +725,7 @@ Summe Augenzahl von Hans: 19</code></pre>
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">for-Schleife mit break</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Methode dateiobjekt.readline()</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<div id="e0c31ac7" class="cell" data-execution_count="20">
+<div id="f6d4b20d" class="cell" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>dateipfad <span class="op">=</span> <span class="st">"01-daten/einwohner_europa_2019.csv"</span></span>
 <span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>dateiobjekt_einwohner <span class="op">=</span> <span class="bu">open</span>(dateipfad, <span class="st">'r'</span>)</span>
 <span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -751,7 +752,7 @@ Bulgarien,7000039
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <p>Mit der Methode <code>dateiobjekt.readline()</code> kann eine einzelne Zeile eingelesen werden.</p>
-<div id="d7b7e868" class="cell" data-execution_count="21">
+<div id="02abd568" class="cell" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>dateipfad <span class="op">=</span> <span class="st">"01-daten/einwohner_europa_2019.csv"</span></span>
 <span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>dateiobjekt_einwohner <span class="op">=</span> <span class="bu">open</span>(dateipfad, <span class="st">'r'</span>)</span>
 <span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -774,7 +775,7 @@ Bulgarien,7000039
 </div>
 <p>Die Datei hat also zwei Spalten. In der ersten Spalte sind die Ländernamen eingetragen, in der zweiten Spalte die Werte. Als Trennzeichen wird das Komma verwendet. In der ersten Zeile sind die Spaltenbeschriftungen eingetragen.</p>
 <p>Im vorherigen Abschnitt haben wir die Methode <code>dateiobjekt.read()</code> kennengelernt, mit der eine Datei vollständig als string eingelesen wird. Zunächst wird die Datei mit der Methode <code>dateiobjekt.read()</code> in das Objekt einwohner eingelesen und wieder geschlossen.</p>
-<div id="3b96bf35" class="cell" data-execution_count="22">
+<div id="0a414c45" class="cell" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>dateipfad <span class="op">=</span> <span class="st">"01-daten/einwohner_europa_2019.csv"</span></span>
 <span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>dateiobjekt_einwohner <span class="op">=</span> <span class="bu">open</span>(dateipfad, <span class="st">'r'</span>)</span>
 <span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -818,7 +819,7 @@ Vereinigtes Koenigreich,66647112
 </div>
 </div>
 <p>Anschließend können die eingelesenen Daten mit der Methode <code>str.split('\n')</code> zeilweise aufgeteilt werden. Mit <code>'\n'</code> wird als Argument der Zeilenumbruch übergeben. Die Methode liefert eine Liste zurück.</p>
-<div id="5bf35ae7" class="cell" data-execution_count="23">
+<div id="f00577eb" class="cell" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>liste_einwohner_zeilenweise <span class="op">=</span> einwohner.split(<span class="st">"</span><span class="ch">\n</span><span class="st">"</span>)</span>
 <span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(liste_einwohner_zeilenweise[<span class="dv">0</span>:<span class="dv">3</span>])</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -826,7 +827,7 @@ Vereinigtes Koenigreich,66647112
 </div>
 </div>
 <p>Die Liste enthält an der Indexposition die Spaltenbeschriftungen. Diese können mit der Methode <code>liste.pop(index)</code> aus der Liste entfernt und zugleich in einem neuen Objekt gespeichert werden.</p>
-<div id="7d1a5ff9" class="cell" data-execution_count="24">
+<div id="645675fa" class="cell" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>spaltennamen <span class="op">=</span> liste_einwohner_zeilenweise.pop(<span class="dv">0</span>)</span>
 <span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>spaltennamen <span class="op">=</span> spaltennamen.split(<span class="st">','</span>)</span>
 <span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Überschrift Spalte 0: </span><span class="sc">{</span>spaltennamen[<span class="dv">0</span>]<span class="sc">}</span><span class="ch">\t</span><span class="ss">Überschrift Spalte 1: </span><span class="sc">{</span>spaltennamen[<span class="dv">1</span>]<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -835,7 +836,7 @@ Vereinigtes Koenigreich,66647112
 </div>
 </div>
 <p>Anschließend kann die Liste mit der Methode <code>str.split(',')</code> nach Ländern und Werten aufgeteilt werden. Der Vorgang bricht allerdings mit einer Fehlermeldung ab. Die Fehlermeldung wird im folgenden Code-Block per Ausnahmebehandlung abgefangen. Neben der Fehlermeldung werden der verursachende Listeneintrag und dessen Indexposition ausgegeben.</p>
-<div id="3937dd88" class="cell" data-execution_count="25">
+<div id="69696d55" class="cell" data-execution_count="25">
 <div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Leere Listen vor der Schleife anlegen</span></span>
 <span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>geo <span class="op">=</span> []</span>
 <span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>einwohnerzahl <span class="op">=</span> []</span>
@@ -865,7 +866,7 @@ Eintrag: ['']    Zeilenindex: 29</code></pre>
 </div>
 <p>Die Fehlermeldung ist so zu deuten, dass eine der Listenoperationen mit dem Slice Operator einen ungültigen Index anspricht. Leicht angepasst, liefert der Code-Block auch die Ursache der Fehlermeldung.</p>
 <p>Wird die leere Zeile aus der Liste entfernt, klappt das Aufteilen der Ländernamen und der Werte.</p>
-<div id="96a9cd26" class="cell" data-execution_count="26">
+<div id="d0d02661" class="cell" data-execution_count="26">
 <div class="sourceCode cell-code" id="cb48"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="co"># leere Zeile entfernen</span></span>
 <span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>liste_einwohner_zeilenweise.remove(<span class="st">''</span>)</span>
 <span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -928,7 +929,7 @@ Musterlösung vollständiges Einlesen
 <section id="einlesen-als-liste" class="level2" data-number="7.6">
 <h2 data-number="7.6" class="anchored" data-anchor-id="einlesen-als-liste"><span class="header-section-number">7.6</span> Einlesen als Liste</h2>
 <p>Ein Dateiobjekt kann auch direkt als Liste eingelesen werden. Die Methode <code>dateiobjekt.readlines()</code> gibt eine Liste zurück, in der jede Zeile einen Eintrag darstellt. Ebenso kann die Listenfunktion <code>list()</code> auf Dateiobjekte angewendet werden. Beide Vorgehensweisen liefern die gleiche Liste zurück, in der der Zeilenumbruch <code>\n</code> mit ausgelesen wird.</p>
-<div id="dd6044f5" class="cell" data-execution_count="27">
+<div id="96247b43" class="cell" data-execution_count="27">
 <div class="sourceCode cell-code" id="cb50"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>dateipfad <span class="op">=</span> <span class="st">"01-daten/einwohner_europa_2019.csv"</span></span>
 <span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>dateiobjekt_einwohner <span class="op">=</span> <span class="bu">open</span>(dateipfad, <span class="st">'r'</span>)</span>
 <span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -952,7 +953,7 @@ Musterlösung vollständiges Einlesen
 </div>
 <p>Um den Zeilenumbruch zu entfernen, könnte mit dem Slice Operator das letzte Zeichen jedes Listeneintrags entfernt werden.</p>
 <p>Eine andere Möglichkeit ist die Methode <code>str.replace(old, new, count=-1)</code>, mit der Zeichen ersetzt oder gelöscht werden können. Die Parameter <code>old</code> und <code>new</code> geben die zu ersetzende bzw. die einzusetzende Zeichenfolge an und <em>müssen positional</em> übergeben werden. Über den Parameter <code>count</code> kann eingestellt werden, wie oft die Zeichenfolge <code>old</code> ersetzt werden soll. Standardmäßig wird jedes Vorkommen ersetzt.</p>
-<div id="dbd24d48" class="cell" data-execution_count="28">
+<div id="7aa61523" class="cell" data-execution_count="28">
 <div class="sourceCode cell-code" id="cb52"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Hund'</span>.replace(<span class="st">'Hu'</span>, <span class="st">'Mu'</span>))</span>
 <span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a>zeichenfolge <span class="op">=</span> <span class="st">'Ein  kurzer Text ohne  doppelte Leerzeichen.'</span></span>
@@ -964,14 +965,14 @@ Ein kurzer Text ohne doppelte Leerzeichen.</code></pre>
 </div>
 </div>
 <p>Die Methode <code>str.replace()</code> kann auch zum Löschen verwendet werden. Wird für den Parameter <code>new</code> eine leere Zeichenfolge übergeben, wird die in <code>old</code> übergebene Zeichenfolge gelöscht.</p>
-<div id="3d674135" class="cell" data-execution_count="29">
+<div id="84ab2f82" class="cell" data-execution_count="29">
 <div class="sourceCode cell-code" id="cb54"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(zeichenfolge.replace(<span class="st">' '</span>, <span class="st">''</span>).replace(<span class="st">'doppelte'</span>, <span class="st">''</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>EinkurzerTextohneLeerzeichen.</code></pre>
 </div>
 </div>
 <p>Mit der Methode <code>str.replace()</code> kann die eingelesene Liste um den Zeilenumbruch bereinigt werden.</p>
-<div id="cc189808" class="cell" data-execution_count="30">
+<div id="394f6892" class="cell" data-execution_count="30">
 <div class="sourceCode cell-code" id="cb56"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>dateipfad <span class="op">=</span> <span class="st">"01-daten/einwohner_europa_2019.csv"</span></span>
 <span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a>dateiobjekt_einwohner <span class="op">=</span> <span class="bu">open</span>(dateipfad, <span class="st">'r'</span>)</span>
 <span id="cb56-3"><a href="#cb56-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -995,7 +996,7 @@ Ein kurzer Text ohne doppelte Leerzeichen.</code></pre>
 <section id="dateien-schreiben" class="level2" data-number="7.7">
 <h2 data-number="7.7" class="anchored" data-anchor-id="dateien-schreiben"><span class="header-section-number">7.7</span> Dateien schreiben</h2>
 <p>Um Dateien zu schreiben, müssen diese mit der <code>write</code>-Methode eines Dateiobjekts verwendet werden. Dieser Methode wird als Argument die zu schreibende Zeichenfolge übergeben.</p>
-<div id="4256458f" class="cell" data-execution_count="31">
+<div id="0fb08cc9" class="cell" data-execution_count="31">
 <div class="sourceCode cell-code" id="cb58"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a>dateipfad <span class="op">=</span> <span class="st">"01-daten/neue_datei.txt"</span></span>
 <span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Öffne Datei zum Schreiben öffnen</span></span>
@@ -1010,7 +1011,7 @@ Ein kurzer Text ohne doppelte Leerzeichen.</code></pre>
 <span id="cb58-12"><a href="#cb58-12" aria-hidden="true" tabindex="-1"></a>datei.close()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Die Datei kann nun ausgelesen werden.</p>
-<div id="6dccbe50" class="cell" data-execution_count="32">
+<div id="356818cc" class="cell" data-execution_count="32">
 <div class="sourceCode cell-code" id="cb59"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a>dateiinhalt <span class="op">=</span> <span class="bu">open</span>(dateipfad, mode <span class="op">=</span> <span class="st">'r'</span>)</span>
 <span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a>text <span class="op">=</span> dateiinhalt.read()</span>
 <span id="cb59-3"><a href="#cb59-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(text)</span>
