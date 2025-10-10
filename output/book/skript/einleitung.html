@@ -248,6 +248,12 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Module und Pakete importieren</span></span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../skript/daswichtigste.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Das Wichtigste</span></span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -290,27 +296,8 @@ window.Quarto = {
 </header>
 
 
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Platzhalter Einleitungsvideo: Stärken und Schwächen von Python
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Stärken:<br>
-Einstieg: sehr einfach, da die Sprache genau dafür entworfen wurde und mit wenigen Strukturen und Funktionalitäten auskommt</p>
-<p>Generalität: wird weltweit in allen Disziplinen eingesetzt ohne domänenspezifische Vereinfachungen zu nutzen</p>
-<p>Erweitbarkeit: riesige Anzahl bereits verfügbarer Module mit sehr umfangreichen Funktionsumfängen. Die Installation klappt in der Regel reibungslos und schnell</p>
-<p>Verfügbarkeit: freie Interpreter für alle populären Computersysteme, sowohl der Interpreter als auch fast alle Module sind quelloffen und frei verfügbar</p>
-<p>Schwächen:<br>
-Python wurde nicht speziell für die Datenanalyse gemacht. Die Sprache und die verfügbaren Module entwickeln sich dynamisch, sodass viele Dinge nicht einheitlich umgesetzt ist. Die Dokumentation ist sehr umfangreich, aber nicht sonderlich zugänglich</p>
-</div>
-</div>
+<div style="position: relative; width: 100%; aspect-ratio: 16 / 9;">
+<p><iframe src="https://av.tib.eu/player/71644" allowfullscreen="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></p>
 </div>
 <p>Die Erzeugung und Auswertung von Daten ist ein zentraler Bestandteil wissenschaftlicher Forschung. Die computergestützte Datenanalyse ermöglicht es, große Datenmengen (teil-)automatisiert auszuwerten. Gut lesbare Skriptsprachen wie Python sorgen für eine nachvollziehbare Datenverarbeitung und ermöglichen es, Analysen “auf Knopfdruck” zu wiederholen oder anzupassen.</p>
 <div class="border">
@@ -325,7 +312,7 @@ Python wurde nicht speziell für die Datenanalyse gemacht. Die Sprache und die v
 <p>&nbsp;</p>
 <p>Python kommt als schlichte Konsole daher. Python-Code wird in die Konsole eingegeben oder in einer reinen Textdatei, dem Skript, gespeichert. Der Programmcode wird von einem sogenannten Interpreter ausgeführt. Der Interpreter übersetzt die Programmanweisungen des Skripts in Maschinencode für das jeweilige Computersystem. Dadurch kann das Skript auf verschiedenen Computersystemen ausgeführt werden. Moderne Python-Interpreter sind nicht auf durch ASCII darstellbare Zeichen limitiert und können auch mit Zeichen aus dem Format <a href="https://de.wikipedia.org/wiki/UTF-8">UTF-8</a> umgehen, das das ASCII-Format z. B. um deutsche Sonderzeichen erweitert.</p>
 <p>Zahlreiche Funktionen wie Codeformatierung, Codevervollständigung und Fehleranalyse werden durch eine sogenannte integrierte Entwicklungsumgebung (Integrated Development Environment, IDE) bereitgestellt.</p>
-<div id="e52ac004" class="cell" data-execution_count="1">
+<div id="e74f83a0" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -342,7 +329,7 @@ Python wurde nicht speziell für die Datenanalyse gemacht. Die Sprache und die v
 <h3 class="anchored" data-anchor-id="klassen-typen-objekte-attribute">Klassen, Typen, Objekte, Attribute</h3>
 <p>Ein Pythonprogramm besteht aus verschiedenen Elementen: Operatoren und Operanden, Funktionen und Methoden, Werten und Variablen und vielem mehr. Alles in Python ist ein Objekt.</p>
 <p>Jedes Objekt gehört zu einer Klasse, beispielsweise zur Klasse der Ganzzahlen. Die Klasse bestimmt als Blaupause die <em>Eigenschaften</em> und das <em>Verhalten</em> des Objekts - etwa welche Daten gespeichert und welche Operationen ausgeführt werden können. Ein kurzes Beispiel: Abhängig von ihrer Klasse, verhalten sich Objekte anders mit dem Operator <code>+</code>.</p>
-<div id="ccc6db76" class="cell" data-execution_count="2">
+<div id="14a163fa" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(<span class="dv">2</span>), <span class="dv">2</span> <span class="op">+</span> <span class="dv">2</span>, <span class="st">"Ganzzahlen werden addiert."</span>)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(<span class="st">'a'</span> <span class="kw">and</span> <span class="st">'2'</span>), <span class="st">'a'</span> <span class="op">+</span> <span class="st">'2'</span>, <span class="st">"Zeichen werden verkettet."</span>)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(<span class="va">True</span>), <span class="va">True</span> <span class="op">+</span> <span class="va">True</span>, <span class="st">"Wahrheitswerte werden addiert."</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -353,10 +340,10 @@ Python wurde nicht speziell für die Datenanalyse gemacht. Die Sprache und die v
 </div>
 </div>
 <p>Das liegt daran, dass das Verhalten des Operators <code>+</code> für die Klassen Ganzzahlen (‘int’), Zeichenfolgen (‘str’) und Boolesche Werte (‘bool’) definiert ist. Anders verhält es sich mit <code>None</code>, einer Klasse, mit der nicht existente Werte verarbeitet werden:</p>
-<div id="81f03601" class="cell" data-execution_count="3">
+<div id="a100264e" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="va">None</span> <span class="op">+</span> <span class="va">None</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="bb5764aa" class="cell" data-execution_count="4">
+<div id="fd97e969" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-stdout">
 <pre><code>unsupported operand type(s) for +: 'NoneType' and 'NoneType'</code></pre>
 </div>
@@ -373,7 +360,7 @@ Python wurde nicht speziell für die Datenanalyse gemacht. Die Sprache und die v
 </div>
 <p>&nbsp;</p>
 <p>Zu welcher Klasse bzw. zu welchem Typ ein Objekt gehört, kann mit der Funktion <code>type()</code> ermittelt werden.</p>
-<div id="b7324f50" class="cell" data-execution_count="5">
+<div id="4550cb5e" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(<span class="bu">print</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;class 'builtin_function_or_method'&gt;</code></pre>
@@ -388,7 +375,7 @@ Python wurde nicht speziell für die Datenanalyse gemacht. Die Sprache und die v
 <ol type="1">
 <li>Zahlen und Operatoren können direkt eingegeben werden. Text, genauer eine Zeichenfolge, muss in einfache oder doppelte Anführungszeichen gesetzt werden, andernfalls interpretiert Python diesen als Namen eines Objekts. Zeichenfolgen können neben Buchstaben, Sonderzeichen und Zahlen enthalten.</li>
 </ol>
-<div id="3f1b92f4" class="cell" data-execution_count="6">
+<div id="d076f08d" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">1</span> <span class="op">+</span> <span class="dv">2</span>)</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'123: Hallo Welt!'</span>)</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>text_variable <span class="op">=</span> <span class="st">'Hallo Python!'</span></span>
@@ -402,7 +389,7 @@ Hallo Python!</code></pre>
 <ol start="2" type="1">
 <li>Kommentare werden mit einer vorangestellten Raute <code>#</code> gekennzeichnet. Kommentare markieren Code, der nicht ausgeführt werden soll, oder Erläuterungen.</li>
 </ol>
-<div id="474be833" class="cell" data-execution_count="7">
+<div id="ea503860" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Ein reiner Kommentar</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co"># print("Python ist großartig!") # auskommentierter Code, gefolgt von einem Kommentar</span></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Python ist ziemlich gut."</span>) <span class="co"># auszuführender Code, gefolgt von einem Kommentar</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -413,7 +400,7 @@ Hallo Python!</code></pre>
 <ol start="3" type="1">
 <li>Ausdrücke müssen in einer Zeile stehen. Längere Ausdrücke können mit dem Backslash <code>\</code> über mehrere Zeilen fortgesetzt werden (hinter <code>\</code> darf keine <code>#</code> stehen). Innerhalb von Funktionen wie zum Beispiel <code>print()</code> können Zeilen nach jedem Komma fortgesetzt werden.</li>
 </ol>
-<div id="acc2fc42" class="cell" data-execution_count="8">
+<div id="c243e897" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>variable1 <span class="op">=</span> <span class="dv">15</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>variable2 <span class="op">=</span> <span class="dv">25</span></span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -433,7 +420,7 @@ Hallo Python!</code></pre>
 <ol start="4" type="1">
 <li>Die Anzahl der Leerzeichen zwischen Operanden und Operatoren kann beliebig sein.</li>
 </ol>
-<div id="08a76e08" class="cell" data-execution_count="9">
+<div id="ed7cda95" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">1</span><span class="op">+</span><span class="dv">0</span>, <span class="dv">1</span> <span class="op">+</span> <span class="dv">1</span>, <span class="dv">1</span> <span class="op">+</span>                  <span class="dv">2</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>1 2 3</code></pre>
@@ -443,7 +430,7 @@ Hallo Python!</code></pre>
 <li>Die Einrückung mit Leerzeichen kennzeichnet einen zusammengehörigen Code-Block. Innerhalb eines Code-Blocks muss immer die gleiche Anzahl Leerzeichen verwendet werden. Es muss mindestens ein Leerzeichen gesetzt werden, ansonsten ist die Anzahl der Leerzeichen beliebig. Üblich sind 2 oder 4 Leerzeichen.<br>
 Die folgende for-Schleife führt alle Anweisungen im eingerückten Ausführungsblock aus. Die anschließende, nicht eingerückte Zeile markiert den Beginn einer neuen, nicht zur Schleife gehörigen Anweisung.</li>
 </ol>
-<div id="eb31f335" class="cell" data-execution_count="10">
+<div id="3c297d30" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>):</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(variable1)</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(variable2)</span>
@@ -462,7 +449,7 @@ Die folgende for-Schleife führt alle Anweisungen im eingerückten Ausführungsb
 <p>Mit sogenannten <code>f-Strings</code> können formatierte Zeichenfolgen erstellt werden. Formatierte Zeichenfolgen werden mit einem den Anführungsstrichen vorangestellten <code>f</code> erstellt. Werte und Variablen können durch Platzhalter eingesetzt werden, die mit geschweiften Klammern <code>{}</code> angegeben und mit Formattierungsinformationen versehen werden. Das Formatierungsformat innerhalb der geschweiften Klammer ist vereinfacht dargestellt:</p>
 <pre><code>{Variablenname:PlatzbedarfAusgabetyp}</code></pre>
 <p>Ein f-String mit Platzhaltern ohne Formatierungsinformationen:</p>
-<div id="0ad7546c" class="cell" data-execution_count="11">
+<div id="e86399c5" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>zahl1 <span class="op">=</span> <span class="dv">5</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>zahl2 <span class="op">=</span> <span class="dv">7</span></span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>verhältnis <span class="op">=</span> zahl1 <span class="op">/</span> zahl2</span>
@@ -478,21 +465,21 @@ Die folgende for-Schleife führt alle Anweisungen im eingerückten Ausführungsb
 <li><p><code>2</code> ist der Wert für die darzustellenden Nachkommastellen.</p></li>
 <li><p><code>f</code> spezifiziert die Darstellung einer Gleitkommazahl ‘float’.</p></li>
 </ul>
-<div id="60095aaa" class="cell" data-execution_count="12">
+<div id="3ba86fcf" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Das Verhältnis von </span><span class="sc">{</span>zahl1<span class="sc">}</span><span class="ss"> zu </span><span class="sc">{</span>zahl2<span class="sc">}</span><span class="ss"> ist </span><span class="sc">{</span>verh<span class="sc">ä</span>ltnis<span class="sc">:.2f}</span><span class="ss">."</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Das Verhältnis von 5 zu 7 ist 0.71.</code></pre>
 </div>
 </div>
 <p>Das Gleiche ist mit einem Wert möglich:</p>
-<div id="47a4f51f" class="cell" data-execution_count="13">
+<div id="eb773ece" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Das Verhältnis ist genauer </span><span class="sc">{</span><span class="fl">0.7142857142857143</span><span class="sc">:.3f}</span><span class="ss">."</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Das Verhältnis ist genauer 0.714.</code></pre>
 </div>
 </div>
 <p>Ein Wert für die insgesamt darzustellenden Stellen wird vor dem Dezimaltrennzeichen übergeben <code>{verhältnis:7.2f}</code> bzw. inklusive führender Nullen <code>{verhältnis:07.2f}</code>:</p>
-<div id="f6ef81c9" class="cell" data-execution_count="14">
+<div id="f93d78c4" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Das Verhältnis von </span><span class="sc">{</span>zahl1<span class="sc">}</span><span class="ss"> zu </span><span class="sc">{</span>zahl2<span class="sc">}</span><span class="ss"> ist </span><span class="sc">{</span>verh<span class="sc">ä</span>ltnis<span class="sc">:7.2f}</span><span class="ss">."</span>)</span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Das Verhältnis ist genauer </span><span class="sc">{</span><span class="fl">0.7142857142857143</span><span class="sc">:07.3f}</span><span class="ss">."</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -605,7 +592,7 @@ Das Verhältnis ist genauer 000.714.</code></pre>
 </ol>
 <p><strong>Die Musterlösung kann Marc machen.</strong></p>
 <div id="tip-lösungausgabe" class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -614,7 +601,7 @@ Tipp&nbsp;1.1: Musterlösung Ausgabe
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 
 </div>
