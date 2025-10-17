@@ -518,5 +518,15 @@
     "crumbs": [
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Module und Pakete importieren</span>"
     ]
+  },
+  {
+    "objectID": "skript/daswichtigste.html",
+    "href": "skript/daswichtigste.html",
+    "title": "9  Das Wichtigste",
+    "section": "",
+    "text": "Python ist eine sehr vielseitige und deshalb auch eine der am häufigsten genutzen Programmiersprachen. Die Pythonbasis bringt das Grundgerüst für die statistische Programmierung mit. Durch spezialisierte Module wird der Funktionsumfang noch erheblich erweitert. Mehr dazu erfahren Sie in dem Video.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Das Wichtigste</span>"
+    ]
   }
 ]
