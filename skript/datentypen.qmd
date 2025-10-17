@@ -100,10 +100,33 @@ Bei gleichrangigen Operationen werden diese von links nach rechts ausgeführt.
 
     b) 30 Jahre Anlagedauer mit 2 Prozent jährlicher Rendite
 
-**Die Musterlösung kann Marc machen.**
-
 ::: {#tip-lösungzahlen .callout-tip collapse="true"}
 ## Musterlösung Zahlen
+
+:::: {.border}
+
+```{python}
+# 1.
+print('4 + 2 * 4 =', 4+2*4, '\n')
+# 2.
+print('2 hoch 12 =', 2**12, '\n')
+# 3.
+print('Rest aus 315 geteilt durch 4 =', 315%4, '\n')
+# 4.
+print('1 + 2^6 / 5 = ', 1+(2**6)/5 , '\n')
+# 5.
+print('binär 11111101001 ist dezimal =', 0b11111101001, '\n')
+# 6.
+print('binär 11111101001 / 101 ist dezimal =', 0b11111101001/0b101, '\n')
+# 7.
+variante_a = 1000*1.03**20
+print(f'nach 20 Jahren mit 3 Prozent = {variante_a:.2f}')
+variante_b = 1000*1.02**30
+print(f'nach 30 Jahren mit 2 Prozent = {variante_b:.2f}')
+```
+
+Musterlösung von Marc Sönnecken
+::::
 :::
 
 ## Boolsche Werte
@@ -193,17 +216,44 @@ Die Operatoren `&`, `^` und `|` haben jedoch für Mengen (die wir später kennen
 ## Aufgaben boolsche Werte
 **Lösen Sie die Aufgaben mit Python.**
 
-1. Ist das Verhältnis aus 44 zu 4.5 größer als 10?
-2. Ist es wahr, dass 4.5 größer als 4 aber kleiner als 5 ist?
+1. Ist das Verhältnis aus 44 zu 4,5 größer als 10?
+2. Ist es wahr, dass 4,5 größer als 4 aber kleiner als 5 ist?
 3. Ist 2 hoch 10 gleich 1024?
 4. Sind die Zahlen 3, 4 und 5 ganzzahlig durch 2 teilbar ODER ungleich 10?
 5. Prüfen Sie, ob eine Person den Vollpreis bezahlen muss, wenn Sie Ihr Alter angibt.  
-Kinder unter 14 Jahren fahren kostenlos, Jugendliche zwischen 14 und 18 Jahren und Senior:innen ab 65 Jahren erhalten einen Rabatt.
-
-**Die Musterlösung kann Marc machen**
+Erwachsene zahlen den Vollpreis. Kinder unter 14 Jahren fahren kostenlos. Jugendliche ab 14 und bis zum Erreichen des 18. Lebensjahrs sowie Senior:innen ab 65 Jahren erhalten einen Rabatt.
 
 ::: {#tip-musterlösung-bool .callout-tip collapse="true"}
+## Musterlösung boolsche Werte
 
+:::: {.border}
+
+```{python}
+# 1.
+print('Ist 44/4,5 größer als 10?', 44/4.5 > 10)
+# 2.
+print('Ist 4,5 größer als 4 aber kleiner als 5?', 4<4.5 and 4.5<5)
+# 3.
+print('Ist 2 hoch 10 gleich 1024?', 2**10 == 1024)
+# 4.
+print('Sind die Zahlen 3, 4 und 5 ganzzahlig durch 2 teilbar ODER ungleich 10?')
+print('3:', 3%2 == 0 or 3 != 10)
+print('4:', 4%2 == 0 or 4 != 10)
+print('5:', 5%2 == 0 or 5 != 10)
+# 5. Alter prüfen
+
+# Variable für das zu prüfende Alter
+age = 17
+print('Alter =', age)
+
+print('Die Person muss den Vollpreis zahlen:', age >= 18 and age < 65)
+print('Die Person fährt mit Rabatt:', age >= 14 and age < 18 or age >= 65)
+print('Die Person fährt kostenlos:', age < 14)
+
+```
+
+Musterlösung von Marc Sönnecken und Maik Poetzsch
+::::
 :::
 
 ## Zeichenfolgen
@@ -258,11 +308,25 @@ print('a' or 'b', 'a' and 'b')
 3. Welche Zeichenfolge ist kleiner, "Aachen" oder "Bern". Warum ist das so, wie werden Zeichenfolgen verglichen?
 4. Geben Sie den Dateipfad aus: "~\\home\\tobi\\neue_daten"
 
-**Die Musterlösung kann Marc machen.**
-
 ::: {#tip-lösungstrings .callout-tip collapse="true"}
 ## Musterlösung Aufgaben Zeichenfolgen
 
+:::: {.border}
+
+```{python}
+# 1.
+print("python" + "for beginners") # Die beiden Zeichenfolgen werden direkt aneinander gekettet, ohne Leerzeichen dazwischen
+# 2.
+print(10*("tick tack"))
+# 3.
+print( "Aachen"<"Bern" ) # es werden die Unicode-Werte verglichen
+# 4.
+print(r"~\home\tobi\neue_daten") # Python interpretiert den Backslash "\" als Escape-Zeichen. Um dies bei Dateipfaden zu verhindern, wird der Pfad mittels r" als raw String ausgegeben.
+```
+
+Musterlösung von Marc Sönnecken
+
+::::
 ::: 
 
 ## Variablen
@@ -409,10 +473,50 @@ Erzeugen Sie eine Variable für den Zeitpunkt $t$, z. B.: $t = 10 \, min$.
 Berechnen Sie mit obiger Gleichung und mit Hilfe der Variablen die Position $x(t)$.
 Geben Sie nicht nur den Wert von $x(t)$ in Kilometer aus, sondern betten ihn in einen ganzen Antwortsatz (einschließlich Einheiten) ein.
 
-**Die Musterlösung kann Marc machen.**
-
 ::: {#tip-lösungvariablen .callout-tip collapse="true"}
 ## Musterlösung Aufgaben Variablen
+
+:::: {.border}
+
+1. Aufgabe
+```{python}
+# 1.
+def zeit_aufteilung(t):
+    tage = t // (24*3600)
+    t = t % (24*3600)
+    stunden = t//3600
+    t = t%3600
+    minuten = t//60
+    sekunden = t%60
+    
+    return tage, stunden, minuten, sekunden
+
+# hier die zu prüfenden Werte a, b, c eintragen
+zeit_gegeben = 79222
+
+tage, stunden, minuten, sekunden = zeit_aufteilung(zeit_gegeben)
+
+print(f"{zeit_gegeben} Sekunden entsprechen {tage} Tagen, {stunden} Stunden, {minuten} Minuten und {sekunden} Sekunden")
+
+```
+
+2. Aufgabe
+
+```{python}
+# 2.
+# Ausgangswerte inkl. Umrechnungen
+x0 = 10*1000 # Kilometer in Metern
+v0 = 50/3.6 # km/h in m/s
+a = 0.1
+t = 10*60 # Minuten in Sekunden
+
+x = x0 + v0 * t + 0.5 * a * t **2
+
+print(f"Die berechnete Position des Fahrzeugs zur Zeit t = {(t/60):.0f} Minuten beträgt {(x/1000):.2f} Kilometer.")
+```
+
+Musterlösung von Marc Sönnecken
+::::
 
 :::
 

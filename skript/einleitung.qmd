@@ -240,10 +240,65 @@ Eine Auflistung aller verfügbaren Ausgabetypen findet sich in der [Python Dokum
 3. Geben Sie mit Hilfe der formatierten Zeichenfolge eine Tabelle aus, welche die Spalten $x$, $x^2$ und $x^3$ für ganze Zahlen zwischen -2 und 2 auflistet.
 
 
-**Die Musterlösung kann Marc machen.**
-
 ::: {#tip-lösungausgabe .callout-tip collapse="true"}
 ## Musterlösung Ausgabe
+
+:::: {.border}
+
+1. Aufgabe
+```{python}
+# Verändern Sie die natürliche Schreibweise so, dass nur noch eine Stelle nach dem Komma angezeigt wird.
+# Was fällt auf?
+print(f"natürliche Schreibweise: {1015.39:12.4f}")
+print(f"wissenschaftliche Schreibweise: {1015.39:e}")
+
+print(f"Schreibweise mit einer Kommastelle: {1015.39:12.1f}")
+
+# Verändern Sie die wissenschaftliche Schreibweise so, dass anstelle von e die Zehnerbasis als E geschrieben wird.
+print(f"Zehnerbasis verändern: {1015.39:E}")
+
+```
+
+Es fällt auf, dass die Nachkommastelle der natürlichen Zahl automatisch gerundet wird. Beim Ändern der Zehnerbasis zu einem großen **E** wird dieses auch in der `print`-Ausgabe groß geschrieben.
+
+2. Aufgabe
+
+```{python}
+# 2.
+# Wandeln Sie die Zahl 1015.39 in eine Zeichenfolge um und stellen Sie diese mit 12 Stellen rechtsbündig dar.
+print(f"{"1015.39":>12s}")
+```
+
+3. Aufgabe
+
+```{python}
+# 3.
+# Geben Sie mit Hilfe der formatierten Zeichenfolge eine Tabelle aus, welche
+# die Spalten x, x² und x³ und für ganze Zahlen zwischen -2 und 2 auflistet.
+
+x = -2
+print(f"{x:>10d} {x**2:>10d} {x**3:>10d}")
+x = -1
+print(f"{x:>10d} {x**2:>10d} {x**3:>10d}")
+x = 0
+print(f"{x:>10d} {x**2:>10d} {x**3:>10d}")
+x = 1
+print(f"{x:>10d} {x**2:>10d} {x**3:>10d}")
+x = 2
+print(f"{x:>10d} {x**2:>10d} {x**3:>10d}")
+```
+
+Alternativ ist auch eine (elegantere) Lösung mit einer `for`-Schleife möglich:
+
+```{python}
+for x in range(-2,3):
+    print(f"{x:>12d} {x**2:>12d} {x**3:>12d}")
+```
+
+Musterlösung von Marc Sönnecken.
+::::
+
+
 :::
 
 &nbsp;  

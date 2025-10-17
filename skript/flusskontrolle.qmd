@@ -187,21 +187,33 @@ print("Liste:", list(range(2, 11, 2)))
 print("Tupel:", tuple(range(1, 11, 2)))
 ```
 
-`start` und `stop` können auch negativ sein, `step` muss immer größer 0 sein.
+`start` und `stop` können auch negativ sein. Für aufsteigende Zahlenfolgen muss `stop` immer größer als `start` sein.
 
 ```{python}
 for i in range(-5, -1):
   print(i)
 ```
 
-`stop` muss immer größer als `start` sein. Um eine absteigende Zahlenfolge zu erzeugen, wird die Funktion `reversed(sequenz)` verwendet.
+`step` kann ebenfalls negativ sein. Dann wird eine absteigende Zahlenfolge erzeugt. Für absteigende Zahlenfolgen muss `start` immer größer als `stop` sein.
+```{python}
+for i in range(-1, -5, -1):
+  print(i)
+```
+
+Eine absteigende Zahlenfolge kann auch mit der Funktion `reversed(sequenz)` verwendet werden. Das Ergebnis unterscheidet sich je nach Vorgehensweise bzw. muss für das selbe Ergebnis eine andere Eingabe vorgenommen werden:
 
 ```{python}
+# Absteigende Folge, aber start ist größer als stop
 # Die Ausgabe bleibt leer
 print(list(range(5, 0)))
 
 # Mit der Funktion reversed geht es
 print(list(reversed(range(0, 5))))
+
+# Für einer negative Schrittweite muss start größer sein als stop
+print(list(range(0, 5, -1)))
+print(list(range(5, 0, -1)))
+
 ```
 
 ##### Listennotation
@@ -354,7 +366,7 @@ else:
 
   - gerade oder ungerade ist,
 
-  - rot oder schwarz ist,
+  - rot, schwarz oder grün ist,
 
   - niedrig (1-18) oder hoch (19-36) ist und
 
@@ -370,11 +382,82 @@ European roulette von Betzaar.com ist lizensiert unter [CC 3.0 BY-SA](https://cr
 
 &nbsp;
 
-**Die Musterlösung kann Marc machen.**
-
 ::: {.callout-tip collapse="true"}
 ## Musterlösung Aufgaben Flusskontrolle
 
+:::: {.border} 
+
+1. Aufgabe
+```{python}
+# Schreiben Sie ein Programm, das von 1 bis 25 und von 38 bis 50 zählt und jeden Wert, der ganzzahlig durch 7 teilbar ist, mit print() ausgibt.
+
+i = 0
+while i < 50:
+  i += 1
+  if i > 25 and i < 38 or i % 7 != 0:
+    continue
+  else:
+    print(i)
+
+# Alternative mit Listen
+# Hinweis: wie im Abschnitt "Schleifen" erwähnt muss der Stop-Wert der range-Funktionen um eine Zahl höher angesetzt werden, da Python exklusiv zählt
+numbers = list(range(1,26))+list(range(38,51))
+for i in numbers:
+    if i%7 == 0:
+        print(i)
+```
+
+2. Aufgabe
+```{python}
+# Anlegen der zu prüfenden (ganzen) Zahl als Variable
+x = 10
+
+# die roten und schwarzen Zahlen werden jeweils als Listen angelegt (ein Tupel funktioniert hier auch)
+red_numbers = [1,3,5,7,9,12,14,16,18,21,23,25,27,28,30,32,34,36]
+black_numbers = [2,4,6,8,10,11,13,15,17,19,20,22,24,26,29,31,33,35]
+
+# die erste if-Abfrage prüft, ob die Zahl überhaupt im Wertebereich liegt. Falls nicht, wird direkt unten zum "else"-Zweig gesprungen
+if x >= 0 and x <= 36:
+
+    # innerhalb der if-Abfrage befinden sich weitere if-Abfragen, die jeweils auf die anderen Merkmale prüfen:
+
+    # Prufung ob die Zahl gerade oder ungerade ist
+    if x%2 == 0:
+        print("Zahl ist gerade")
+    else:
+        print("Zahl ist ungerade")
+
+    # Prüfung ob die Zahl rot, schwarz oder grün ist
+    if x in red_numbers:
+        print("Zahl ist rot")
+    elif x in black_numbers:
+        print("Zahl ist schwarz")
+    elif x == 0:
+        print("Zahl ist grün")
+
+    # Prüfung ob die Zahl hoch oder niedrig ist
+    if x >= 1 and x <= 18:
+        print("Zahl ist niedrig")
+    elif x >= 19 and x <= 36:
+        print("Zahl ist hoch")
+    
+    # Prüfung in welchem Dutzend die Zahl liegt
+    if x >= 1 and x <= 12:
+        print("Zahl liegt im 1. Dutzend")
+    elif x >= 13 and x <= 24:
+        print("Zahl ist im 2. Dutzend")
+    elif x >= 25 and x <= 36:
+        print("Zahl ist im 3. Dutzend")
+    else:
+        print("Zahl liegt in keinem Dutzend")
+    
+else:
+    print("Zahl ist nicht im Wertebereich vorhanden.")
+```
+
+Musterlösung von Marc Sönnecken und Maik Poetzsch
+
+::::
 :::
 
 &nbsp;  

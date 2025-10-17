@@ -239,19 +239,73 @@ print(liste1 is liste2)
 
 ### Aufgaben Listen
 
-1. Erstellen Sie eine Liste 'wochentage', die die sieben Tage der Woche enthält. Verwenden Sie den Slice-Operator, um eine neue Liste 'wochenende' mit den Tagen des Wochenendes zu erstellen. Entfernen Sie die Tage des Wochenendes aus der Liste 'wochentage'.
+1. Bestimmen Sie in der Liste `zahlen = [34, 12, 0, 67, 23]` die Position des Werts 0. Entfernen Sie den Wert aus der Liste und geben Sie die Liste aufsteigend sortiert aus. 
 
-2. 4-Tage-Woche: Verwenden Sie Listenmethoden, um den Freitag aus der Liste 'wochentage' zu entfernen und der Liste 'wochenende' vor dem Samstag hinzuzufügen.
+2. Geben Sie nun mit Hilfe des Zugriffsoperators `[]` die Indexpositionen 1 und 3 der sortierten Liste 'zahlen' aus.
 
-3. Bestimmen Sie in der Liste `zahlen = [34, 12, 0, 67, 23]` die Position des Werts 0. Entfernen Sie den Wert aus der Liste und geben Sie die Liste aufsteigend sortiert aus. 
+3. Legen Sie eine Liste mit den Zahlen 1 bis 10 an.
 
-4. Geben Sie nun mit Hilfe des Zugriffsoperators `[]` die Indexpositionen 1 und 3 der sortierten Liste 'zahlen' aus.
+  - Geben Sie mit dem Slice-Operator alle geraden Zahlen aus. 
+  - Geben Sie mit dem Slice-Operator die ungeraden Zahlen absteigend aus.
 
-**Musterlösung kann Marc machen.**
+4. Erstellen Sie eine Liste 'wochentage', die die sieben Tage der Woche enthält. Verwenden Sie den Slice-Operator, um eine neue Liste 'wochenende' mit den Tagen des Wochenendes zu erstellen. Entfernen Sie die Tage des Wochenendes aus der Liste 'wochentage'.
+
+5. 4-Tage-Woche: Verwenden Sie Listenmethoden, um den Freitag aus der Liste 'wochentage' zu entfernen und der Liste 'wochenende' vor dem Samstag hinzuzufügen.
 
 ::: {#tip-listen .callout-tip collapse="true"}
-## Musterlösung
+## Musterlösung Listen
 
+:::: {.border}
+1. Aufgabe
+```{python}
+# 1.
+zahlen = [34, 12, 0, 67, 23]
+gesuchter_index = zahlen.index(0)
+print(gesuchter_index)
+
+zahlen.remove(0)
+zahlen.sort()
+print(zahlen)
+```
+
+2. Aufgabe
+```{python}
+# 2.
+print(f"Wert der Zahl an Indexposition 1: {zahlen[1]}")
+print(f"Wert der Zahl an Indexposition 3: {zahlen[3]}")
+```
+
+3. Aufgabe
+```{python}
+# 3.
+liste = list(range(1, 11))
+print(liste[1::2])
+print(liste[-2::-2])
+```
+
+4. Aufgabe
+```{python}
+# 4.
+# Aufgabe Wochentage
+wochentage = ["Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag", "Sonntag"]
+wochenende = wochentage[5:7] # hier ist es auch möglich wochentage[-2:] zu benutzen
+print("Wochenende:", wochenende)
+
+wochentage.pop(-1)
+wochentage.pop(-1)
+print(wochentage)
+```
+
+5. Aufgabe
+```{python}
+# 5.
+wochenende.insert(0, wochentage.pop(4))
+print(wochentage)
+print(wochenende)
+```
+
+Musterlösung von Marc Sönnecken
+::::
 :::
 
 ## Tupel
@@ -472,7 +526,7 @@ Erstellen Sie ein Skript, welches eine Umrechnungstabelle für Geschwindigkeiten
 
 *Tipp: In Ihrem Skript können Sie die Funktion [input()](https://docs.python.org/3/library/functions.html#input) verwenden, um Werte per Eingabe zu erfassen.*
 
-3. Sortieren: Gegeben ist die Liste `meine_liste = list(range(9, 0, -1))`. Diese soll mittels for-Schleifen sortiert werden.    
+3. Sortieren: Gegeben ist die Liste `meine_liste = list(range(9, 0, -1))`. Diese soll mittels for-Schleifen sortiert werden (zum Beispiel mit dem Bubblesort-Algorithmus).
 
 ::: {#tip-musterlösungsammeltypen .callout-tip collapse="true"}
 ## Musterlösung Aufgaben Sammeltypen
