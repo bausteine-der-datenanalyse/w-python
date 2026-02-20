@@ -77,7 +77,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-c8cd78f0f7a4102d54b040ada74a3c93.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-f67a6f502b8d980179456538afc82e6f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -302,7 +302,7 @@ Tipp&nbsp;3.1: Dokumentation
 <section id="funktionen" class="level3">
 <h3 class="anchored" data-anchor-id="funktionen">Funktionen</h3>
 <p>Funktionen können Objekte unabhängig von ihrem Datentyp übergeben werden. Funktionen werden über ihren Funktionsnamen gefolgt von runden Klammern <code>()</code> aufgerufen. Ein Beispiel ist die Funktion <code>print()</code>:</p>
-<div id="fc90700e" class="cell" data-execution_count="1">
+<div id="e7f917fd" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>var_str <span class="op">=</span> <span class="st">'ABC'</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>var_int <span class="op">=</span> <span class="dv">26</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>var_bool <span class="op">=</span> <span class="va">True</span></span>
@@ -317,7 +317,7 @@ Die Variable var_3 hat den Typ &lt;class 'bool'&gt;</code></pre>
 </div>
 </div>
 <p>Funktionen müssen immer einen Wert zurückgeben. Wenn Funktionen keinen Wert zurückgeben können oder sollen, wird der Wert <code>None</code> zurückgegeben, der nicht existente Werte kennzeichnet.</p>
-<div id="7d0906d2" class="cell" data-execution_count="2">
+<div id="bf3efad7" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>res <span class="op">=</span> <span class="bu">print</span>( <span class="dv">15</span> )</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(res)</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -325,8 +325,8 @@ Die Variable var_3 hat den Typ &lt;class 'bool'&gt;</code></pre>
 None</code></pre>
 </div>
 </div>
-<p>Funktionen können verschachtelt und so von innen nach außen nacheinander ausgeführt werden. In diesem Code-Beispiel wird zunächst die Summe zweier Zahlen und anschließend der Wahrheitswert des Ergebnisses gebildet. Dieser wird anschließend mit der Funktion print ausgegeben.</p>
-<div id="93bfb54c" class="cell" data-execution_count="3">
+<p>Funktionen können verschachtelt und so von innen nach außen nacheinander ausgeführt werden. In diesem Code-Beispiel wird zunächst die Summe zweier Zahlen und anschließend der Wahrheitswert des Ergebnisses gebildet. Dieser wird anschließend mit der Funktion <code>print()</code> ausgegeben.</p>
+<div id="c20bcf04" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">bool</span>(<span class="bu">sum</span>([<span class="dv">1</span>, <span class="dv">2</span>])))</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>True</code></pre>
@@ -336,7 +336,7 @@ None</code></pre>
 <section id="methoden" class="level3">
 <h3 class="anchored" data-anchor-id="methoden">Methoden</h3>
 <p>Methoden sind eine Besonderheit objektorientierter Programmiersprachen. Im vorherigen Kapitel wurde erläutert, dass in Python Objekte zu einem bestimmten Typ bzw. zu einer Klasse gehören und abhängig von den in ihnen gespeicherten Werte einen passenden Datentyp erhalten. Methoden sind Funktionen, die zu einer bestimmten Klasse gehören und nur für Objekte dieser Klasse verfügbar sind. Methoden können auch für mehrere Klassen definiert sein. Methoden werden getrennt durch einen Punkt <code>.</code> hinter Objekten mit ihrem Namen aufgerufen: <code>variable.methode</code> bzw. <code>(wert).methode</code>. Beispielsweise sind <code>.upper()</code>, <code>.lower()</code> und <code>.title()</code> für Zeichenfolgen definierte Methoden.</p>
-<div id="3e171860" class="cell" data-execution_count="4">
+<div id="b3dc760b" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>toller_text <span class="op">=</span> <span class="st">"Python 3.12 ist großartig."</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(toller_text.upper())</span>
@@ -353,16 +353,16 @@ MIT IN KLAMMERN GESETZTEN WERTEN KLAPPT ES AUCH.</code></pre>
 </div>
 </div>
 <p>Für Objekte mit einem unpassenden Datentyp sind Methoden wie <code>.lower()</code> nicht verfügbar.</p>
-<div id="1587f258" class="cell" data-execution_count="5">
+<div id="59ac0ed6" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>((<span class="dv">1</span>).upper())</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="86951a8d" class="cell" data-execution_count="6">
+<div id="e30c1deb" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-stdout">
 <pre><code>'int' object has no attribute 'upper'</code></pre>
 </div>
 </div>
 <p>Methoden können verkettet und so nacheinander ausgeführt werden. In diesem Beispiel wird die Zeichenfolge ‘Katze’ klein geschrieben, dann die Häufigkeit des Buchstabens ‘k’ gezählt.</p>
-<div id="12b27aaf" class="cell" data-execution_count="7">
+<div id="367a8002" class="cell" data-execution_count="7">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Katze'</span>.lower().count(<span class="st">'k'</span>))</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>1</code></pre>
@@ -382,14 +382,14 @@ Beispiel&nbsp;3.1: Methoden eines Objekts bestimmen
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Mit der Funktion <code>dir(objekt)</code> können die verfügbaren Methoden eines Objekts ausgegeben werden. Dabei werden jedoch auch die Attribute und die Methoden der Klasse des Objekts ausgegeben, sodass die Ausgabe oft sehr umfangreich ist. Zum Beispiel für die Ganzzahl 1:</p>
-<div id="891114d3" class="cell" data-execution_count="8">
+<div id="675a0fec" class="cell" data-execution_count="8">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">dir</span>(<span class="dv">1</span>))</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>['__abs__', '__add__', '__and__', '__bool__', '__ceil__', '__class__', '__delattr__', '__dir__', '__divmod__', '__doc__', '__eq__', '__float__', '__floor__', '__floordiv__', '__format__', '__ge__', '__getattribute__', '__getnewargs__', '__getstate__', '__gt__', '__hash__', '__index__', '__init__', '__init_subclass__', '__int__', '__invert__', '__le__', '__lshift__', '__lt__', '__mod__', '__mul__', '__ne__', '__neg__', '__new__', '__or__', '__pos__', '__pow__', '__radd__', '__rand__', '__rdivmod__', '__reduce__', '__reduce_ex__', '__repr__', '__rfloordiv__', '__rlshift__', '__rmod__', '__rmul__', '__ror__', '__round__', '__rpow__', '__rrshift__', '__rshift__', '__rsub__', '__rtruediv__', '__rxor__', '__setattr__', '__sizeof__', '__str__', '__sub__', '__subclasshook__', '__truediv__', '__trunc__', '__xor__', 'as_integer_ratio', 'bit_count', 'bit_length', 'conjugate', 'denominator', 'from_bytes', 'imag', 'is_integer', 'numerator', 'real', 'to_bytes']</code></pre>
 </div>
 </div>
 <p>Um die Ausgabe auf Methoden einzugrenzen, kann folgende Funktion in Listenschreibweise verwendet werden:</p>
-<div id="60bda513" class="cell" data-execution_count="9">
+<div id="b07abb9c" class="cell" data-execution_count="9">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>objekt <span class="op">=</span> <span class="dv">1</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>attribute <span class="op">=</span> [attr <span class="cf">for</span> attr <span class="kw">in</span> <span class="bu">dir</span>(objekt) <span class="cf">if</span> <span class="bu">callable</span> (<span class="bu">getattr</span>(objekt, attr))]</span>
@@ -399,7 +399,7 @@ Beispiel&nbsp;3.1: Methoden eines Objekts bestimmen
 </div>
 </div>
 <p>Mit doppelten Unterstrichen umschlossene Methoden sind für die Klasse definierte Methoden. Folgende Funktion entfernt Methoden mit doppelten Unterstrichen aus der Ausgabe:</p>
-<div id="54717b78" class="cell" data-execution_count="10">
+<div id="920c2a95" class="cell" data-execution_count="10">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>objekt <span class="op">=</span> <span class="dv">1</span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>attribute <span class="op">=</span> [attr <span class="cf">for</span> attr <span class="kw">in</span> <span class="bu">dir</span>(objekt) <span class="cf">if</span> (<span class="bu">callable</span>(<span class="bu">getattr</span>(objekt, attr)) <span class="kw">and</span> <span class="kw">not</span> attr.startswith(<span class="st">'__'</span>))]</span>
@@ -409,14 +409,14 @@ Beispiel&nbsp;3.1: Methoden eines Objekts bestimmen
 </div>
 </div>
 <p>Im Fall einer Ganzzahl können Methoden (zur Abgrenzung von Gleitkommazahlen in umschließenden Klammern) wie folgt aufgerufen werden:</p>
-<div id="e2ee12a6" class="cell" data-execution_count="11">
+<div id="19a143ad" class="cell" data-execution_count="11">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>(<span class="dv">1</span>).as_integer_ratio()</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="10">
 <pre><code>(1, 1)</code></pre>
 </div>
 </div>
 <p>Die Methoden des Objekts ‘toller_text’:</p>
-<div id="12d7bd7d" class="cell" data-execution_count="12">
+<div id="7567c3e0" class="cell" data-execution_count="12">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>objekt <span class="op">=</span> toller_text</span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>attribute <span class="op">=</span> [attr <span class="cf">for</span> attr <span class="kw">in</span> <span class="bu">dir</span>(objekt) <span class="cf">if</span> (<span class="bu">callable</span>(<span class="bu">getattr</span>(objekt, attr)) <span class="kw">and</span> <span class="kw">not</span> attr.startswith(<span class="st">'__'</span>))]</span>
@@ -517,7 +517,7 @@ Tipp&nbsp;3.3: Positionale und Schlüsselwortargumente, *args und **kwargs
 <p>Ein Beispiel für das Trennzeichen <code>*</code> ist die Funktion <code>glob</code> aus dem gleichnamigen Modul. Der Parameter <code>pathname</code> kann positional (an erster Stelle) oder als Schlüsselwort übergeben werden. Die übrigen Parameter müssen als Schlüsselwortargumente übergeben werden.</p>
 <pre><code>glob.glob(pathname, *, root_dir=None, dir_fd=None, recursive=False, include_hidden=False)</code></pre>
 <p>Beide Steuerzeichen können innerhalb einer Funktionsdefinition vorkommen, allerdings nur in der Reihenfolge <code>/</code> und <code>*</code>. Im umgekehrten Fall wäre es unmöglich, Argumente zu übergeben. Ein Beispiel ist die Funktion <code>sorted</code>. Der erste Parameter muss positional übergeben werden, die Parameter <code>key</code> und <code>reverse</code> müssen als Schlüsselworte übergeben werden.</p>
-<pre><code>sorted(iterable, /, *, key=None, reverse=False)¶</code></pre>
+<pre><code>sorted(iterable, /, *, key=None, reverse=False)</code></pre>
 <div class="callout callout-style-simple callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -546,7 +546,7 @@ max(iterable, *, key=None)</code></pre>
 <li><p>Richtig oder falsch: Methoden stehen abhängig vom Datentyp eines Werts oder eines Objekts zur Verfügung.</p></li>
 <li><p>Geben Sie die drei Werte 1, 2 und 3 mit <code>print()</code> aus. Parametrisieren Sie die Funktion so, dass ihre Ausgabe wie folgt aussieht:</p></li>
 </ol>
-<div id="a0c45747" class="cell" data-execution_count="13">
+<div id="fdd2d544" class="cell" data-execution_count="13">
 <div class="cell-output cell-output-stdout">
 <pre><code>1_x_2_x_3</code></pre>
 </div>
@@ -572,7 +572,7 @@ max(iterable, *, key=None)</code></pre>
 <div class="callout-body-container callout-body">
 <p>Aufgabe 1: richtig</p>
 <p>Aufgabe 2</p>
-<div id="8b0cefe1" class="cell" data-execution_count="14">
+<div id="11aacde5" class="cell" data-execution_count="14">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, sep <span class="op">=</span> <span class="st">"_x_"</span>)</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Aufgabe 3: Die Funktion bool() hat ein optionales Argument object mit dem Standardwert False. Das Argument muss positional übergeben werden.</p>
