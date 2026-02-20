@@ -494,6 +494,8 @@ print(f"Die Liste einwohnerzahl hat den Datentypen {type(einwohnerzahl)}")
 print(f"Die Einträge der Liste haben den Datentypen {type(einwohnerzahl[0])}")
 ```
 
+Musterlösung von Marc Sönnecken.
+
 :::
 
 ## Einlesen als Liste
