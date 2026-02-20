@@ -45,7 +45,7 @@ res = print( 15 )
 print(res)
 ```
 
-Funktionen können verschachtelt und so von innen nach außen nacheinander ausgeführt werden. In diesem Code-Beispiel wird zunächst die Summe zweier Zahlen und anschließend der Wahrheitswert des Ergebnisses gebildet. Dieser wird anschließend mit der Funktion print ausgegeben.
+Funktionen können verschachtelt und so von innen nach außen nacheinander ausgeführt werden. In diesem Code-Beispiel wird zunächst die Summe zweier Zahlen und anschließend der Wahrheitswert des Ergebnisses gebildet. Dieser wird anschließend mit der Funktion `print()` ausgegeben.
 
 ```{python}
 print(bool(sum([1, 2])))
@@ -201,7 +201,7 @@ glob.glob(pathname, *, root_dir=None, dir_fd=None, recursive=False, include_hidd
 Beide Steuerzeichen können innerhalb einer Funktionsdefinition vorkommen, allerdings nur in der Reihenfolge `/` und `*`. Im umgekehrten Fall wäre es unmöglich, Argumente zu übergeben. Ein Beispiel ist die Funktion `sorted`. Der erste Parameter muss positional übergeben werden, die Parameter `key` und `reverse` müssen als Schlüsselworte übergeben werden.
 
 ```
-sorted(iterable, /, *, key=None, reverse=False)¶
+sorted(iterable, /, *, key=None, reverse=False)
 ```
 
 :::: {.callout-warning appearance="simple"}

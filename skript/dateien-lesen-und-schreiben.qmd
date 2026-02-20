@@ -455,10 +455,44 @@ except IndexError as error:
   
   - Welchen Datentyp haben die Einträge der Liste einwohnerzahl?
 
-**Die Musterlösung kann Marc machen**
-
 ::: {.callout-tip collapse="true"}
 ## Musterlösung vollständiges Einlesen
+
+```{python}
+# 1. Minimum und Maximum der Einwohnerzahlen und dazugehörige Länder bestimmen
+liste_einwohner = []
+for ele in einwohnerzahl:
+     liste_einwohner.append(int(ele))
+
+# Umwandeln der Strings in Integer bei der Einwohnerzahl
+einwohnerzahl = [int(zahl) for zahl in einwohnerzahl]
+
+# 2. Fehler bereinigen
+# Sowohl der Fehler in der Liste der Einwohnerzahlen als auch das entsprechende Land werden entfernt.
+for i in range(len(einwohnerzahl) -1,-1,-1): # Hiermit wird rückwärts durch die Liste iteriert, damit das Entfernen eines Elements die Indizes der bereits durchlaufenen Elemente nicht beeinflusst
+    if einwohnerzahl[i] < 0:
+        einwohnerzahl.pop(i)
+        geo.pop(i)
+
+for i in range(len(einwohnerzahl)):
+    if einwohnerzahl[i] == max(einwohnerzahl):
+        maximum = i
+    elif einwohnerzahl[i] == min(einwohnerzahl):
+        minimum = i
+
+maximum_land = geo[maximum]
+minimum_land = geo[minimum]
+print(f"Maximum: {maximum_land} mit {max(einwohnerzahl)} Einwohnern")
+print(f"Minimum: {minimum_land} mit {min(einwohnerzahl)} Einwohnern")
+# 3. Einwohner Europa insgesamt
+
+pop_gesamt = sum(einwohnerzahl) # Uganda gehört nicht zu Europa, wurde durch die Fehlerbehandlung aber bereits entfernt
+print(f"Die Summe aller Einwohner in Europa beträgt {pop_gesamt}")
+
+# 4. 
+print(f"Die Liste einwohnerzahl hat den Datentypen {type(einwohnerzahl)}")
+print(f"Die Einträge der Liste haben den Datentypen {type(einwohnerzahl[0])}")
+```
 
 :::
 
