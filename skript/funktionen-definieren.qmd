@@ -8,7 +8,7 @@ Das Definieren eigener Funktionen eröffnet vielfältige Möglichkeiten in Pytho
   - Funktionen machen Programmcode kürzer und lesbarer. Außerdem gibt es nur eine Stelle, welche bei Änderungen angepasst werden muss.
 
 ## Syntax
-Das Schlüsselwort `def` leitet die Funktionsdefinition ein. Es wird gefolgt vom Funktionsnamen und den Funktionsparametern, welche in runden Klammern `()` eingeschlossen sind. Der Funktionskopf wird mit einem Doppelpunkt `:` beendet. Der Anweisungsblock der Funktion ist eingerückt. Jede Funktion liefert einen Rückgabewert, welche durch das Schlüsselwort `return` an die aufrufende Stelle zurückgegeben wird.  `return` beendet die Ausführung der Schleife, auch wenn es nicht am Ende des Anweisungsblocks steht.
+Das Schlüsselwort `def` leitet die Funktionsdefinition ein. Es wird gefolgt vom Funktionsnamen und den Funktionsparametern, welche in runden Klammern `()` eingeschlossen sind. Der Funktionskopf wird mit einem Doppelpunkt `:` beendet. Der Anweisungsblock der Funktion ist eingerückt. Jede Funktion liefert einen Rückgabewert, welcher durch das Schlüsselwort `return` an die aufrufende Stelle zurückgegeben wird.  `return` beendet die Ausführung der Funktion, auch wenn es nicht am Ende des Anweisungsblocks steht.
 
 ``` {python}
 #| output: false
