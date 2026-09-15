@@ -2,17 +2,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>6&nbsp; Eigene Funktionen definieren – Bausteine Computergestützter Datenanalyse</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -59,7 +65,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
-  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -89,15 +94,14 @@ div.csl-indent {
 <link href="../skript/sammeltypen.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-f67a6f502b8d980179456538afc82e6f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-41d1ed59529443dc312b46011c211845.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -276,14 +280,14 @@ div.csl-indent {
 </ul>
 <section id="syntax" class="level2" data-number="6.1">
 <h2 data-number="6.1" class="anchored" data-anchor-id="syntax"><span class="header-section-number">6.1</span> Syntax</h2>
-<p>Das Schlüsselwort <code>def</code> leitet die Funktionsdefinition ein. Es wird gefolgt vom Funktionsnamen und den Funktionsparametern, welche in runden Klammern <code>()</code> eingeschlossen sind. Der Funktionskopf wird mit einem Doppelpunkt <code>:</code> beendet. Der Anweisungsblock der Funktion ist eingerückt. Jede Funktion liefert einen Rückgabewert, welche durch das Schlüsselwort <code>return</code> an die aufrufende Stelle zurückgegeben wird. <code>return</code> beendet die Ausführung der Schleife, auch wenn es nicht am Ende des Anweisungsblocks steht.</p>
-<div id="d445dd8d" class="cell" data-execution_count="1">
+<p>Das Schlüsselwort <code>def</code> leitet die Funktionsdefinition ein. Es wird gefolgt vom Funktionsnamen und den Funktionsparametern, welche in runden Klammern <code>()</code> eingeschlossen sind. Der Funktionskopf wird mit einem Doppelpunkt <code>:</code> beendet. Der Anweisungsblock der Funktion ist eingerückt. Jede Funktion liefert einen Rückgabewert, welcher durch das Schlüsselwort <code>return</code> an die aufrufende Stelle zurückgegeben wird. <code>return</code> beendet die Ausführung der Funktion, auch wenn es nicht am Ende des Anweisungsblocks steht.</p>
+<div id="e0f8a47f" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> Funktionsname(Parameter1, Parameter2):</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    Anweisungsblock</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> Rückgabewert</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Damit die Funktion ausgeführt wird, muss der definierte Funktionsname aufgerufen werden. In der Funktion ist nach dem Schlüsselwort <code>return</code> eine weitere Anweisung enthalten, die nicht mehr ausgeführt wird.</p>
-<div id="0b81a484" class="cell" data-execution_count="2">
+<div id="16f3fb1f" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Beispiel 1: Summe der Quadrate</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Definition einer Funktion zur Berechnung der Summe der Quadrate von zwei Argumenten</span></span>
@@ -304,7 +308,7 @@ Argument b: 7
 </div>
 </div>
 <p>Der Rückgabewert kann in einer Variablen gespeichert werden.</p>
-<div id="38aaffde" class="cell" data-execution_count="3">
+<div id="16f6a960" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>ergebnis <span class="op">=</span> sum_quadrate(<span class="dv">6</span>, <span class="dv">7</span>)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(ergebnis)</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -318,7 +322,7 @@ Argument b: 7
 <section id="optionale-parameter" class="level2" data-number="6.2">
 <h2 data-number="6.2" class="anchored" data-anchor-id="optionale-parameter"><span class="header-section-number">6.2</span> Optionale Parameter</h2>
 <p>Mit Hilfe von optionalen Parametern kann die Programmausführung gesteuert werden. Optionale Parameter müssen nach verpflichtend zu übergebenen Parametern definiert werden. In diesem Beispiel wird die print-Ausgabe der Funktion mit dem Parameter <code>ausgabe</code> gesteuert.</p>
-<div id="74c6012f" class="cell" data-execution_count="4">
+<div id="8a756334" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Beispiel 2: optionale Argumente</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Definition einer Funktion zur Berechnung der Summe der Quadrate von zwei Argumenten</span></span>
@@ -342,7 +346,7 @@ Wert Argument b: 7
 </div>
 </div>
 <p>Gibt es mehrere optionale Parameter, so erfolgt die Zuweisung von Argumenten positional oder über das Schlüsselwort.</p>
-<div id="23dc946f" class="cell" data-execution_count="5">
+<div id="eb6730bb" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Beispiel 3: mehrere optionale Argumente</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Definition einer Funktion zur Berechnung der Summe der Quadrate von zwei Argumenten</span></span>
@@ -378,7 +382,7 @@ Argument p: 4
 <section id="rückgabewerte" class="level2" data-number="6.3">
 <h2 data-number="6.3" class="anchored" data-anchor-id="rückgabewerte"><span class="header-section-number">6.3</span> Rückgabewert(e)</h2>
 <p>Funktionen können in Python nur einen einzigen Rückgabewert haben. Trotzdem können mehrere Rückgabewerte mit einem Komma getrennt werden. Python gibt diese als Tupel zurück.</p>
-<div id="c76effb3" class="cell" data-execution_count="6">
+<div id="af9b4d57" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Beispiel 4: mehrere Rückgabewerte</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Definition einer Funktion zur Berechnung der Summe der Quadrate von zwei Argumenten</span></span>
@@ -398,7 +402,7 @@ Argument p: 4
 </div>
 </div>
 <p>Mit dem Slice Operator kann ein bestimmter Rückgabewert ausgewählt werden.</p>
-<div id="f4efd78d" class="cell" data-execution_count="7">
+<div id="7bfe2bed" class="cell" data-execution_count="7">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(ergebnis[<span class="dv">2</span>])</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>summe_potenzen <span class="op">=</span> sum_potenzen(<span class="dv">2</span>, <span class="dv">7</span>, ausgabe <span class="op">=</span> <span class="va">False</span>, p <span class="op">=</span> <span class="dv">4</span>)[<span class="dv">2</span>]</span>
@@ -467,7 +471,7 @@ Schreiben Sie eine Funktion is_palindrome(), die prüft, ob es sich bei einer ü
 <ol type="1">
 <li>Aufgabe Palindrom</li>
 </ol>
-<div id="68cf1944" class="cell" data-execution_count="8">
+<div id="1fada68d" class="cell" data-execution_count="8">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1.</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> is_palindrome(text):</span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    text <span class="op">=</span> text.lower()</span>
@@ -487,7 +491,7 @@ Schreiben Sie eine Funktion is_palindrome(), die prüft, ob es sich bei einer ü
 <ol start="2" type="1">
 <li>Aufgabe Fibonacci</li>
 </ol>
-<div id="203bcf01" class="cell" data-execution_count="9">
+<div id="8f9505e9" class="cell" data-execution_count="9">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 2.</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fibonacci(n):</span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -518,7 +522,7 @@ Schreiben Sie eine Funktion is_palindrome(), die prüft, ob es sich bei einer ü
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">mit Listen</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">mit ord() und chr()</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<div id="3941e6dc" class="cell" data-execution_count="10">
+<div id="ccbb9985" class="cell" data-execution_count="10">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 3.</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> verschluesseln(<span class="bu">str</span>):</span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -568,7 +572,7 @@ Dies ist das Geheimnis: &lt;*)))&gt;&lt;</code></pre>
 </div>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<div id="27ccb1f5" class="cell" data-execution_count="11">
+<div id="a72c74bb" class="cell" data-execution_count="11">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> verschluesseln(a):</span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>    a <span class="op">=</span> <span class="bu">list</span>(a)</span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># print(a)</span></span>
@@ -607,7 +611,7 @@ Dies ist das Geheimnis: &lt;*)))&gt;&lt;</code></pre>
 <ol start="4" type="1">
 <li>Temperaturkonverter</li>
 </ol>
-<div id="74ff4ca9" class="cell" data-execution_count="12">
+<div id="a3df2be8" class="cell" data-execution_count="12">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 4.</span></span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> temperatur_umrechnen(wert, von_einheit, nach_einheit):</span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -657,9 +661,9 @@ Dies ist das Geheimnis: &lt;*)))&gt;&lt;</code></pre>
 <p>&nbsp; (<span class="citation" data-cites="Arnold-2023-funktionen-module-dateien">Arnold (<a href="#ref-Arnold-2023-funktionen-module-dateien" role="doc-biblioref">2023</a>)</span>)</p>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
 <div id="ref-Arnold-2023-funktionen-module-dateien" class="csl-entry" role="listitem">
-Arnold, Simone. 2023. <span>„Datenanalyse mit Python. Funktionen Module Dateien.“</span> Fachhochschule Dortmund.
+Arnold, Simone. 2023. <em>Datenanalyse mit Python. Funktionen Module Dateien.</em> Fachhochschule Dortmund.
 </div>
 </div>
 </section>
